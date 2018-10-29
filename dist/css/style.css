@@ -1,0 +1,186 @@
+@charset "UTF-8";
+/* ======================================== */
+/* Foundation */
+/* ======================================== */
+/* ======================================== */
+/* variables */
+/* ======================================== */
+html {
+  display: block;
+  font-size: 62.5%; }
+
+body {
+  background: #ffffff;
+  color: #191919;
+  font-family: -apple-system, BlinkMacSystemFont, "Lato", "\30D2\30E9\30AE\30CE\89D2\30B4\30B7\30C3\30AF   Pro", "Hiragino Kaku Gothic Pro", "\30E1\30A4\30EA\30AA", "Meiryo", "\FF2D\FF33   \FF30\30B4\30B7\30C3\30AF", "MS PGothic", "YuGothic", "Yu Gothic", "\6E38\30B4\30B7\30C3\30AF", "\6E38\30B4\30B7\30C3\30AF\4F53", "Lato", "arial", "helvetica", sans-serif;
+  font-size: 1.6rem;
+  height: 100%;
+  line-height: 1;
+  margin: 0 auto;
+  overflow-scrolling: touch;
+  padding: 0;
+  width: 100%; }
+  @media screen and (max-width: 768px) {
+    body {
+      overflow-x: hidden; } }
+
+a {
+  color: #2B338D;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none; }
+  a:hover, a:focus, a:visited {
+    color: #2B338D;
+    text-decoration: none; }
+
+a,
+button {
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear; }
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none transparent;
+  border: 0;
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  color: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle; }
+  select::-ms-expand {
+    display: none; }
+
+img {
+  vertical-align: bottom; }
+
+input,
+label,
+select,
+textarea {
+  vertical-align: middle; }
+
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* ======================================== */
+/* Object */
+/* ======================================== */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff; }
+
+.header-carousel {
+  width: 45%;
+  height: 100%;
+  background-color: #2B338D; }
+
+.header__title {
+  position: absolute;
+  top: 9.4rem;
+  left: 3rem;
+  font-family: "Lato", sans-serif;
+  font-size: 8rem;
+  color: #ffffff;
+  font-weight: bold; }
+  .header__title span {
+    display: block;
+    margin-bottom: 3.6rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Lato", "\30D2\30E9\30AE\30CE\89D2\30B4\30B7\30C3\30AF   Pro", "Hiragino Kaku Gothic Pro", "\30E1\30A4\30EA\30AA", "Meiryo", "\FF2D\FF33   \FF30\30B4\30B7\30C3\30AF", "MS PGothic", "YuGothic", "Yu Gothic", "\6E38\30B4\30B7\30C3\30AF", "\6E38\30B4\30B7\30C3\30AF\4F53", "Lato", "arial", "helvetica", sans-serif;
+    font-size: 1.8rem; }
+
+.carousel-thumb__wrap {
+  position: relative; }
+
+.carousel-thumb__item {
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 100%; }
+  .carousel-thumb__item img {
+    display: block;
+    width: 100%; }
+
+.carousel-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 55%;
+  height: 100%; }
+
+.carousel-dots__item {
+  position: relative;
+  width: 33.3%;
+  height: 43.55rem;
+  background-color: #F8F8F8;
+  border: 5px solid #ffffff; }
+
+.carousel__item__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%; }
+  .carousel__item__inner .name {
+    font-family: -apple-system, BlinkMacSystemFont, "Lato", "\30D2\30E9\30AE\30CE\89D2\30B4\30B7\30C3\30AF   Pro", "Hiragino Kaku Gothic Pro", "\30E1\30A4\30EA\30AA", "Meiryo", "\FF2D\FF33   \FF30\30B4\30B7\30C3\30AF", "MS PGothic", "YuGothic", "Yu Gothic", "\6E38\30B4\30B7\30C3\30AF", "\6E38\30B4\30B7\30C3\30AF\4F53", "Lato", "arial", "helvetica", sans-serif;
+    font-size: 1.8rem;
+    color: #191919;
+    font-weight: bold;
+    text-align: center; }
+  .carousel__item__inner img {
+    display: block;
+    margin: 3rem 0 0;
+    width: 100%; }
+  .carousel__item__inner .amount {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 2.2rem;
+    color: #191919;
+    line-height: 1;
+    background-color: #ffffff; }
+  .carousel__item__inner .course {
+    padding: 1rem 0 0;
+    font-size: 3.1rem;
+    color: #191919; }
+

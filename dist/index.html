@@ -30,8 +30,13 @@
 
     <!-- css -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/filipelinhares/ress/master/dist/ress.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- Android用明朝体フォント -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/rem.min.js"></script>
     <title>SurfCar</title>
   </head>
   <body>
@@ -45,8 +50,127 @@
     </nav>
     <header id="header" class="header js-header">
       <div class="header-carousel">
-        <div class="carousel-thumb__wrap"></div>
+        <h1 class="header__title">
+          <span>
+            波乗りのように3年毎、リーズナブルに乗り換える<br />
+            まったく新しい高級新車の買い方
+          </span>
+          Surf Car System
+        </h1>
+        <div class="header-carousel__wrap">
+          <div class="carousel-thumb__wrap">
+            <div class="carousel-thumb__item">
+              <img src="../img/carousel/ferrari_488spider__blue.png" alt="ferrari 488 spider" />
+              <div class="carousel__body">
+                <p class="amount"><span>月額</span>16,900円コース</p>
+                <p class="en">Ferrari 488Spider</p>
+                <p class="ja">フェラーリ 488スパイダー</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-thumb__wrap">
+            <div class="carousel-thumb__item">
+              <img src="../img/carousel/maserati_ghibli__blue.png" alt="maserati ghibli" />
+              <div class="carousel__body">
+                <p class="amount"><span>月額</span>110,000円コース</p>
+                <p class="en">Maserati Ghibli</p>
+                <p class="ja">マセラティ ギブリ</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-thumb__wrap">
+            <div class="carousel-thumb__item">
+              <img src="../img/carousel/m-benz_s300h__blue.png" alt="mercedes benz s300h" />
+              <div class="carousel__body">
+                <p class="amount"><span>月額</span>110,000円コース</p>
+                <p class="en">Mercedes-Benz S300h</p>
+                <p class="ja">メルセデスベンツ S300h</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-thumb__wrap">
+            <div class="carousel-thumb__item">
+              <img src="../img/carousel/bmw_740__blue.png" alt="BMW 740i" />
+              <div class="carousel__body">
+                <p class="amount"><span>月額</span>110,000円コース</p>
+                <p class="en">BMW 740i</p>
+                <p class="ja">BMW 740i</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-thumb__wrap">
+            <div class="carousel-thumb__item">
+              <img src="../img/carousel/m-benz_e__blue.png" alt="mercedes benz e class" />
+              <div class="carousel__body">
+                <p class="amount"><span>月額</span>90,000円コース</p>
+                <p class="en">Mercedes-Benz E Class</p>
+                <p class="ja">メルセデスベンツ E クラス</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-thumb__wrap">
+            <div class="carousel-thumb__item">
+              <img src="../img/carousel/bmw_5__blue.png" alt="BMW 5 serios" />
+              <div class="carousel__body">
+                <p class="amount"><span>月額</span>90,000円コース</p>
+                <p class="en">BMW 5 Series</p>
+                <p class="ja">BMW 5シリーズ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-dots">
+        <div class="carousel-dots__item">
+          <div class="carousel__item__inner">
+            <p class="name">フェラーリ 488スパイダー</p>
+            <img src="../img/carousel/dots/ferrari_488spider.png" alt="ferrari 488spider" />
+            <span class="amount">月額</span>
+            <p class="course">16,900円コース</p>
+          </div>
+        </div>
+        <div class="carousel-dots__item">
+          <div class="carousel__item__inner">
+            <p class="name">マセラティ ギブリ</p>
+            <img src="../img/carousel/dots/maserati_ghibli.png" alt="maserati ghibli" />
+            <span class="amount">月額</span>
+            <p class="course">110,000円コース</p>
+          </div>
+        </div>
+        <div class="carousel-dots__item">
+          <div class="carousel__item__inner">
+            <p class="name">メルセデスベンツ S300h</p>
+            <img src="../img/carousel/dots/m-benz_s300h.png" alt="mercedes-benz s300h" />
+            <span class="amount">月額</span>
+            <p class="course">110,000円コース</p>
+          </div>
+        </div>
+        <div class="carousel-dots__item">
+          <div class="carousel__item__inner">
+            <p class="name">BMW 740i</p>
+            <img src="../img/carousel/dots/bmw_740.png" alt="BMW 740i" />
+            <span class="amount">月額</span>
+            <p class="course">110,000円コース</p>
+          </div>
+        </div>
+        <div class="carousel-dots__item">
+          <div class="carousel__item__inner">
+            <p class="name">メルセデスベンツ Eクラス</p>
+            <img src="../img/carousel/dots/m-benz_e.png" alt="mercedes-benz e class" />
+            <span class="amount">月額</span>
+            <p class="course">90,000円コース</p>
+          </div>
+        </div>
+        <div class="carousel-dots__item">
+          <div class="carousel__item__inner">
+            <p class="name">BMW 5シリーズ</p>
+            <img src="../img/carousel/dots/bmw_5.png" alt="bmw 5 series" />
+            <span class="amount">月額</span>
+            <p class="course">90,000円コース</p>
+          </div>
+        </div>
       </div>
     </header>
+    <script src="./js/app.js"></script>
   </body>
 </html>
