@@ -1,0 +1,348 @@
+.compare-case__wrap {
+  margin: 10rem 0 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.compare-case__wrap {
+  .c-ttl--h3 {
+    margin-bottom: 3rem;
+  }
+
+  tbody {
+    th {
+      vertical-align: top;
+      padding: 2rem 4rem 1.5rem 4rem;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: $color-black;
+      text-align: left;
+      width: 25rem;
+
+      @include mobile-window {
+        padding: 1rem 1rem 1rem 2rem;
+        font-size: 1.3rem;
+        width: 10rem;
+      }
+    }
+  }
+
+  table.is-simple {
+    td {
+      vertical-align: top;
+      padding: 1.5rem 4rem;
+      font-size: 1.4rem;
+      font-weight: normal;
+      text-align: left;
+      line-height: 1.6;
+
+      @include mobile-window {
+        padding: 1rem 2rem 1rem 1rem;
+        font-size: 1.3rem;
+      }
+    }
+
+    tr {
+      &:nth-child(odd) {
+        background-color: #F8F8F8;
+      }
+    }
+  }
+}
+
+.case__inner--sp {
+  @include mobile-window {
+    overflow: scroll;
+  }
+}
+
+.compare-table {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @include mobile-window() {
+    flex-wrap: wrap;
+  }
+}
+
+.compare-table__box {
+  padding: 4rem 3rem;
+  width: 48%;
+  border-radius: .5rem;
+
+  @include mobile-window() {
+    padding: 3rem 1.5rem;
+    width: 100%;
+  }
+
+  &:nth-of-type(1) {
+    border: 3px solid $color-primary;
+  }
+
+  &:nth-of-type(2) {
+    background-color: #f7f7f7;
+    transform: scale(0.95);
+
+    @include mobile-window() {
+      margin: 3rem 0 0;
+    }
+  }
+
+  .name {
+    padding: 0 0 2rem;
+    font-family: $font-init;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: .15rem;
+    line-height: 1;
+    color: $color-primary;
+  }
+
+  .name > span {
+    display: block;
+    padding: .8rem 0 0;
+    font-family: $lato;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: .12rem;
+    line-height: 1;
+    color: $color-black;
+  }
+
+  .table-figure {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: 12rem;
+
+    @include mobile-window() {
+      width: 70%;
+      height: auto;
+    }
+  }
+
+  .table-figure > img {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: 100%;
+
+    @include mobile-window() {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .inner {
+    padding: 4rem 0 0;
+  }
+}
+
+.table-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.3rem 0;
+
+  .item {
+    padding: 0 1.5rem 0 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    width: 32%;
+
+    @include mobile-window() {
+      font-size: 1.4rem;
+    }
+  }
+
+  .detail {
+    padding: 0 3rem 0 1.5rem;
+    font-size: 1.4rem;
+    width: calc(68% - 2rem);
+
+    @include mobile-window() {
+      font-size: 1.3rem;
+    }
+  }
+
+  .detail > span {
+    display: block;
+    font-size: 1.2rem;
+  }
+
+  img {
+    width: 2rem;
+    height: auto;
+  }
+}
+
+.table-caution__text {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  color: $color-black;
+  text-align: right;
+
+  @include mobile-window {
+    text-align: left;
+  }
+}
+
+.compare__text {
+  margin-bottom: 4rem;
+  font-size: 1.6rem;
+  letter-spacing: .25rem;
+
+  @include mobile-window {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    letter-spacing: .15rem;
+  }
+}
+
+.compare__purchase__wrap {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @include mobile-window {
+    background-position: center -15rem;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 38%;
+
+    @include mobile-window {
+      padding-top: 50%;
+    }
+  }
+
+  &.is-ferrari {
+    background-image: url('../img/comparetion/ferrari-comparison.jpg');
+  }
+
+  &.is-lamborghini {
+    background-image: url('../img/comparetion/lamborghini-comparison.jpg');
+  }
+}
+
+.compare__inner {
+  position: absolute;
+  top: 50%;
+  right: 4rem;
+  transform: translate(0, -50%);
+  padding: 4rem;
+  width: 65rem;
+  background-color: $color-white;
+
+  @include mobile-window {
+    position: inherit;
+    top: inherit;
+    right: inherit;
+    transform: none;
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .title {
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $color-black;
+
+    @include mobile-window {
+      margin-bottom: 2rem;
+      font-size: 1.6rem;
+    }
+  }
+
+  table.is-simple {
+    tr {
+      &:nth-child(odd) {
+        background-color: $color-white;
+      }
+    }
+
+    th, td {
+      padding: 1rem 0;
+      font-weight: normal;
+      line-height: 1;
+    }
+
+    th {
+      width: auto;
+    }
+  }
+
+  .caution {
+    padding-top: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #EA2828;
+
+    @include mobile-window {
+      padding-top: 1rem;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.is-lamborghini {
+  .compare__inner {
+    right: inherit;
+    left: 4rem;
+    width: 78rem;
+
+    @include mobile-window {
+      left: inherit;
+      width: 100%;
+    }
+  }
+
+  .compare-table {
+    margin-top: 4.5rem;
+  }
+}
+
+
+.loan {
+  .compare-case__wrap:nth-of-type(1) {
+    @include mobile-window {
+      margin: 0;
+    }
+  }
+  .compare-table {
+
+    .compare__box:nth-of-type(2) {
+      .name:nth-of-type(1) {
+        padding: 1.5rem 3rem;
+        font-size: 2.8rem;
+        color: $color-white;
+        text-align: center;
+        letter-spacing: .25rem;
+      }
+    }
+
+    .compare__box:nth-of-type(3) {
+      .name:nth-of-type(1) {
+        padding: 1.5rem 3rem;
+        font-size: 1.6rem;
+        text-align: center;
+        letter-spacing: .25rem;
+      }
+    }
+  }
+}

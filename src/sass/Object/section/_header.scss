@@ -1,0 +1,328 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 85.6rem;
+  background-color: $color-white;
+
+  @include mobile-window {
+    display: block;
+    height: auto;
+  }
+}
+
+.header-carousel {
+  position: relative;
+  width: 45%;
+  height: 100%;
+  background-color: $color-primary;
+
+  @include mobile-window {
+    padding-bottom: 5rem;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.header__title {
+  position: absolute;
+  top: 8rem;
+  left: 3rem;
+  font-family: $lato;
+  font-size: 8rem;
+  color: $color-white;
+  font-weight: bold;
+
+  span {
+    display: block;
+    margin-bottom: 3.6rem;
+    font-family: $font-init;
+    font-size: 1.4rem;
+    letter-spacing: .35rem;
+    line-height: 2;
+
+    @include mobile-window {
+      font-size: 1.2rem;
+      letter-spacing: .12rem;
+      text-align: center;
+    }
+  }
+
+  @include mobile-window {
+    position: inherit;
+    top: inherit;
+    left: inherit;
+    padding: 4rem 1rem 0 1rem;
+    font-size: 4rem;
+    text-align: center;
+  }
+}
+
+.slick-slider {
+  margin: 30rem 0 0;
+
+  @include mobile-window {
+    margin: 0;
+  }
+}
+
+.header-carousel__wrap {
+  .slick-arrow {
+    display: none;
+  }
+}
+
+.carousel-thumb__item {
+  img {
+    display: block;
+    width: auto;
+    height: 27.6rem;
+
+    @include mobile-window {
+      width: auto;
+      height: 15rem;
+    }
+  }
+}
+
+.carousel__item--01 {
+  img {
+    margin-left: -15rem;
+
+    @include mobile-window {
+      margin-left: -6rem;
+    }
+  }
+}
+
+.carousel__item--02 {
+  img {
+    margin: 0 auto;
+  }
+}
+
+.carousel__item--03 {
+  img {
+    margin-left: -10rem;
+  }
+}
+
+.carousel__item--04 {
+  img {
+    margin: 0 auto;
+  }
+}
+
+.carousel__item--05 {
+  img {
+    margin: 0 auto;
+  }
+}
+
+.carousel__item--06 {
+  img {
+    margin: 0 auto;
+  }
+}
+
+.slick-slide {
+  overflow: hidden;
+}
+
+.carousel__body {
+  padding: 3rem 0 0 3rem;
+
+  @include mobile-window {
+    padding: 2rem 1rem 0 1rem;
+  }
+
+  .amount {
+    margin: 0;
+    font-size: 2.6rem;
+    color: $color-white;
+
+    @include mobile-window {
+      font-size: 2rem;
+    }
+  }
+
+  .amount span {
+    display: inline-block;
+    vertical-align: middle;
+    margin: -.6rem 1rem 0 0;
+    padding: .6rem 1.8rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: $color-primary;
+    background-color: $color-white;
+
+    @include mobile-window {
+      margin: -.3rem 1rem 0 0;
+      padding: .4rem 1.4rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  .en {
+    margin: 0;
+    padding: 2rem 0 0;
+    font-family: $lato;
+    font-size: 2.4rem;
+    color: $color-white;
+    letter-spacing: .18rem;
+
+    @include mobile-window {
+      font-size: 2.2rem;
+      letter-spacing: .15rem;
+    }
+  }
+
+  .ja {
+    margin: 0;
+    padding: 1.5rem 0 0;
+    font-family: $font-init;
+    font-size: 1.8rem;
+    color: $color-white;
+    letter-spacing: .15rem;
+
+    @include mobile-window {
+      font-size: 1.6rem;
+      letter-spacing: .1rem;
+    }
+  }
+}
+
+.slick-dots {
+  bottom: -9rem;
+  right: 3rem;
+  width: auto;
+
+  @include mobile-window {
+    bottom: -3rem;
+  }
+
+  li {
+    margin: 0 1.35rem 0 0;
+    width: 1.2rem;
+    height: 1.2rem;
+
+    &:nth-last-of-type(1) {
+      margin: 0;
+    }
+  }
+
+  button {
+    padding: .5rem !important;
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+  }
+
+  button::before {
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+    background-color: $color-white;
+    opacity: 1 !important;
+    color: transparent !important;
+    border-radius: 50%;
+  }
+
+  li.slick-active {
+    button::before {
+      background-color: #ABAFE5;
+    }
+  }
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 0 0 3rem;
+  width: 55%;
+  height: 100%;
+
+  @include mobile-window {
+    margin: 3rem 0 0;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.carousel-dots__item {
+  position: relative;
+  width: 33.3%;
+  height: 43.55rem;
+  background-color: #F8F8F8;
+  border: 5px solid $color-white;
+  overflow: hidden;
+  transition: $easeInOutQuart;
+
+  @include mobile-window {
+    width: 50%;
+    height: 27rem;
+  }
+
+  &.is-active {
+    transition: $easeInOutQuart;
+    border: 5px solid $color-primary;
+  }
+}
+
+.carousel__item__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+
+  .name {
+    font-family: $font-init;
+    font-size: 1.4rem;
+    color: $color-black;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 3rem;
+    width: 85%;
+  }
+
+  .amount {
+    display: inline-block;
+    margin: 3rem 0 0 2rem;
+    padding: .6rem 1.2rem;
+    font-size: 1.4rem;
+    color: $color-white;
+    font-weight: bold;
+    line-height: 1;
+    background-color: $color-black;
+
+    @include mobile-window {
+      margin: 3rem 0 0 1rem;
+      padding: .4rem 1rem;
+      font-size: 1rem;
+    }
+  }
+
+  .course {
+    padding: 1rem 0 0 2rem;
+    font-size: 1.8rem;
+    color: $color-black;
+
+    @include mobile-window {
+      padding: 1rem 0 0 1rem;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.carousel-dots__item:nth-of-type(1) {
+  img {
+    margin-left: -3rem;
+  }
+}

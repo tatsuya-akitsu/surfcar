@@ -1,0 +1,78 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1.6rem 2rem;
+  width: 100%;
+  background-color: $color-black;
+  z-index: 500;
+
+  @include mobile-window {
+    top: inherit;
+    bottom: 0;
+    padding: 1rem;
+  }
+}
+
+.nav-logo {
+  font-family: $lato;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: $color-white;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 109rem;
+
+  li {
+    flex: 1;
+
+    @include mobile-window {
+      text-align: center;
+    }
+  }
+
+  a {
+    display: block;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: .5rem;
+    width: 2.3rem;
+  }
+
+  .en {
+    font-family: $lato;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: $color-white;
+    letter-spacing: .3rem;
+    text-align: center;
+  }
+
+  .ja {
+    padding-top: .5rem;
+    font-family: $font-init;
+    font-size: 1rem;
+    color: $color-white;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    text-align: center;
+
+    @include mobile-window {
+      font-size: .8rem;
+      letter-spacing: .1rem;
+    }
+  }
+}

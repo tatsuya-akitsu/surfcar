@@ -1,0 +1,146 @@
+.c-button {
+  display: inline-block;
+  line-height: 1;
+  transition: $easeInOutQuart;
+}
+
+a.c-button--contact {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  padding: 2rem 5rem;
+  width: 40rem;
+  background-color: #68b340;
+  border-radius: 1rem;
+
+  @include mobile-window {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding: 1.6rem;
+    width: calc(100% - 3rem);
+    border-radius: .5rem;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0;
+    width: 2.5rem;
+  }
+
+  .en {
+    font-family: $lato;
+    font-size: 3rem;
+    font-weight: bold;
+    color: $color-white;
+    letter-spacing: .3rem;
+    text-align: center;
+
+    @include mobile-window {
+      font-size: 2rem;
+    }
+  }
+
+  .ja {
+    font-family: $font-init;
+    font-size: 1.8rem;
+    color: $color-white;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    text-align: center;
+
+    @include mobile-window {
+      font-size: 1.4rem;
+    }
+  }
+
+  &:hover {
+    transition: $easeInOutQuart;
+    background-color: $color-white;
+
+    .en,
+    .ja {
+      color: #68b340;
+    }
+  }
+}
+
+.c-button--estimate {
+  padding: 2rem 8rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: $color-white;
+  border-radius: .5rem;
+  background-color: $color-primary;
+
+  @include mobile-window {
+    padding: 1.2rem 6rem;
+    font-size: 1.6rem;
+  }
+
+  &:hover {
+    color: $color-primary;
+    background-color: $color-white;
+    transition: $easeInOutQuart;
+  }
+}
+
+.c-button--home {
+  padding: 1.4rem 4rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: $color-primary;
+  border-radius: .5rem;
+  background-color: $color-white;
+
+  @include mobile-window {
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+  }
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-primary;
+    transition: $easeInOutQuart;
+  }
+}
+
+.c-button--back {
+  padding: 1.4rem 4rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: $color-black;
+  border-radius: .5rem;
+  background-color: #f1f1f1;
+
+  @include mobile-window {
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+  }
+
+  &:hover {
+    opacity: .85;
+    transition: $easeInOutQuart;
+  }
+}
+
+.c-button--send {
+  padding: 1.4rem 4rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: $color-white;
+  border-radius: .5rem;
+  background-color: $color-primary;
+
+  @include mobile-window {
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+  }
+
+  &:hover {
+    color: $color-primary;
+    background-color: $color-white;
+    transition: $easeInOutQuart;
+  }
+}

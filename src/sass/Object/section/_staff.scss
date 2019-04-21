@@ -1,0 +1,185 @@
+section.staff {
+  .inner {
+    margin: 0 auto;
+    max-width: 780px;
+  }
+
+  .staff-img--all {
+    margin: 5rem 0 0;
+    display: block;
+    width: 100%;
+  }
+}
+
+.staff-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.staff-item {
+  margin: 3rem 0 0;
+  padding: 0 0 3rem;
+  border-bottom: 1px solid #ccc;
+
+  &:nth-of-type(1) {
+    margin: 0;
+  }
+
+  &:nth-last-of-type(1) {
+    padding: 0;
+    border-bottom: none;
+  }
+
+  &:nth-child(even) {
+    .staff-img {
+      order: 2;
+    }
+
+    .body {
+      order: 1;
+    }
+  }
+}
+
+.staff-media {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mobile-window {
+    display: block;
+  }
+}
+
+.staff-img {
+  position: relative;
+  width: 20rem;
+  height: auto;
+  border-radius: 50%;
+  overflow: hidden;
+
+  @include mobile-window {
+    margin: 0 auto;
+    width: 10rem;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: 100%;
+  }
+}
+
+//.staff-item:nth-of-type(2) {
+//  img {
+//    left: 70%;
+//  }
+//}
+//
+//.staff-item:nth-of-type(3) {
+//  img {
+//    left: 30%;
+//  }
+//}
+//
+//.staff-item:nth-of-type(4) {
+//  img {
+//    left: 35%;
+//  }
+//}
+
+.staff-media {
+  .body {
+    margin-left: 3rem;
+    width: calc(100% - 20rem);
+
+    @include mobile-window {
+      margin-top: 2rem;
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+
+  p > span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: $color-black;
+
+    @include mobile-window {
+      font-size: 1.2rem;
+    }
+  }
+
+  .name > span {
+    margin: 0;
+    padding-bottom: 1rem;
+    display: block;
+    font-family: $lato;
+    font-size: 2rem;
+    font-weight: normal;
+    letter-spacing: .2rem;
+    line-height: 1;
+
+    @include mobile-window {
+      padding-bottom: .5rem;
+      font-size: 1.7rem;
+      letter-spacing: .1rem;
+    }
+  }
+
+  p > span > img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .8rem;
+    width: 1.4rem;
+
+    @include mobile-window {
+      width: 1.2rem;
+    }
+  }
+
+  p {
+    padding-top: 1.4rem;
+    font-size: 1.4rem;
+    color: $color-black;
+
+    @include mobile-window {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    &:nth-of-type(1) {
+      padding-top: 0;
+    }
+
+    &.name {
+      font-size: 1.4rem;
+
+      @include mobile-window {
+        text-align: center;
+      }
+    }
+
+    &.birthplace {
+      padding-top: 2.4rem;
+
+      @include mobile-window {
+        padding-top: 1.6rem;
+        text-align: center;
+      }
+    }
+  }
+}

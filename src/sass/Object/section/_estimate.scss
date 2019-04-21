@@ -1,0 +1,385 @@
+section.contact {
+  background-color: #F8F8F8;
+}
+
+form {
+  margin: 0 auto;
+  max-width: 620px;
+  text-align: center;
+
+  @include mobile-window {
+    max-width: 320px;
+  }
+}
+
+.is-vertical {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mobile-window {
+    display: block;
+  }
+}
+
+.is-posR {
+  position: relative;
+}
+
+.form-wrap {
+  margin-top: 4rem;
+
+  &:nth-of-type(1) {
+    margin-top: 0;
+
+    input:nth-last-of-type(1) {
+      margin-top: .5rem;
+    }
+  }
+
+  &:nth-of-type(2) {
+    input:nth-last-of-type(1) {
+      margin-top: .5rem;
+    }
+  }
+}
+
+.form-box {
+  text-align: left;
+  label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $color-black;
+
+    @include mobile-window {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.is-vertical {
+  .form-box {
+    width: 48.5%;
+
+    @include mobile-window {
+      width: 100%;
+    }
+  }
+
+  .form-box:nth-last-of-type(1) {
+    @include mobile-window {
+      margin-top: 4rem;
+    }
+  }
+}
+
+.required-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -.5rem;
+  margin-left: 2rem;
+  padding: .6rem 1.1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  line-height: 1;
+  color: $color-white;
+  background-color: $color-secondary;
+  border-radius: .3rem;
+
+  @include mobile-window {
+    padding: .4rem .9rem;
+    font-size: .8rem;
+  }
+}
+
+.form-item {
+  margin-top: 1rem;
+
+  img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    width: 1.3rem;
+  }
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"] {
+  padding: 1.1rem 1rem;
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 1;
+  color: $color-black;
+  background-color: $color-white;
+  box-shadow: none;
+  outline: none;
+  border-radius: .3rem;
+  transition: $easeInOutQuart;
+
+  &::-webkit-input-placeholder {
+    color: #ABAFE5;
+    font-size: 1.4rem;
+    font-weight: lighter;
+
+    @include mobile-window {
+      font-size: 1.2rem;
+    }
+  }
+
+  &:-moz-placeholder {
+    color: #ABAFE5;
+    font-size: 1.4rem;
+    font-weight: lighter;
+
+    @include mobile-window {
+      font-size: 1.2rem;
+    }
+  }
+
+  &::-moz-placeholder {
+    color: #ABAFE5;
+    font-size: 1.4rem;
+    font-weight: lighter;
+
+    @include mobile-window {
+      font-size: 1.2rem;
+    }
+  }
+
+  &:-ms-input-placeholder {
+    color: #ABAFE5;
+    font-size: 1.4rem;
+    font-weight: lighter;
+
+    @include mobile-window {
+      font-size: 1.2rem;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid $color-primary;
+    transition: $easeInOutQuart;
+  }
+}
+
+select {
+  cursor: pointer;
+  padding: 1.1rem 1rem;
+  width: 100%;
+  background-color: $color-white;
+  border-radius: .3rem;
+  transition: $easeInOutQuart;
+
+  @include mobile-window {
+    font-size: 1.4rem;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid $color-primary;
+    transition: $easeInOutQuart;
+  }
+}
+
+option {
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: $color-black;
+
+  @include mobile-window {
+    font-size: 1.4rem;
+  }
+}
+
+textarea {
+  padding: 1.1rem 1rem;
+  height: 12rem;
+  background-color: $color-white;
+  border-radius: .3rem;
+  transition: $easeInOutQuart;
+
+  &::-webkit-input-placeholder {
+    color: #ABAFE5;
+    font-size: 1.4rem;
+    font-weight: lighter;
+
+    @include mobile-window {
+      font-size: 1.2rem;
+    }
+  }
+
+  &:-moz-placeholder {
+    color: #ABAFE5;
+    font-size: 1.4rem;
+    font-weight: lighter;
+
+    @include mobile-window {
+      font-size: 1.2rem;
+    }
+  }
+
+  &::-moz-placeholder {
+    color: #ABAFE5;
+    font-size: 1.4rem;
+    font-weight: lighter;
+
+    @include mobile-window {
+      font-size: 1.2rem;
+    }
+  }
+
+  &:-ms-input-placeholder {
+    color: #ABAFE5;
+    font-size: 1.4rem;
+    font-weight: lighter;
+
+    @include mobile-window {
+      font-size: 1.2rem;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid $color-primary;
+    transition: $easeInOutQuart;
+  }
+}
+
+.input--size-xl {
+  width: 100%;
+}
+
+.input--size-lg {
+  width: 67.8%;
+
+  @include mobile-window {
+    width: 100%;
+  }
+}
+
+.input--size-md {
+  width: 48.5%;
+
+  @include mobile-window {
+    width: 100%;
+  }
+}
+
+.input--size-sm {
+  width: 60%;
+}
+
+.input--size-xs {
+  width: 33.5%;
+}
+
+.caution {
+  font-size: 1.2rem;
+  color: $color-black;
+  text-align: left;
+
+  @include mobile-window {
+    font-size: .9rem;
+  }
+}
+
+.form-item ~ .caution {
+  padding-top: 1rem;
+  line-height: 1.8;
+  letter-spacing: .2rem;
+
+  @include mobile-window {
+    letter-spacing: .05rem;
+  }
+}
+
+label ~ .caution {
+  padding-top: 1rem;
+  letter-spacing: .2rem;
+}
+
+.form-wrap--model {
+  input {
+    width: 100%;
+  }
+}
+
+.form-wrap--model,
+.select-wrap--body-type,
+.select-wrap--due-date,
+.select-wrap--estimate,
+.select-wrap--incentive,
+.select-wrap--contract {
+
+  @include mobile-window {
+    width: 29rem;
+  }
+
+  img {
+    right: 1rem;
+  }
+
+  select {
+    width: 28rem;
+
+    @include mobile-window {
+      width: 27rem;
+    }
+  }
+}
+
+.form-box--inspection {
+  .select-wrap,
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  span {
+    padding: 0 1.5rem;
+    font-size: 1.2rem;
+    color: $color-black;
+    line-height: 1;
+
+    @include mobile-window {
+      padding: 0 1rem;
+    }
+  }
+}
+
+.select-wrap--date {
+  img {
+    right: 1rem;
+  }
+
+  select {
+    width: calc(100% - 2rem);
+  }
+}
+
+.estimate-caution {
+  padding-top: 5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.8;
+  letter-spacing: .25rem;
+  color: $color-black;
+  text-align: left;
+
+  @include mobile-window {
+    font-size: .9rem;
+    letter-spacing: .15rem;
+  }
+}
+
+.estimate-caution ~ .c-button {
+  margin-top: 8rem;
+
+  @include mobile-window {
+    margin-top: 4rem;
+  }
+}

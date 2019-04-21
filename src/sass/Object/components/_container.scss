@@ -1,0 +1,17 @@
+.section {
+  padding: 10rem 0;
+  width: 100%;
+  background-color: $color-white;
+
+  @include mobile-window {
+    padding: 5rem 0;
+  }
+}
+
+.wrapper {
+  @include inner()
+}
+
+.inner {
+  padding-top: 6rem;
+}

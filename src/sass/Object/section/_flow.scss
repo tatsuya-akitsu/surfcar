@@ -1,0 +1,274 @@
+section.flow {
+  @include mobile-window {
+    padding: 5rem 0 10rem;
+  }
+}
+
+.flow-list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 5px;
+    height: calc(100% + 10rem);
+    background-color: $color-primary;
+
+    @include mobile-window {
+      left: 1rem;
+      width: 3px;
+    }
+  }
+}
+
+.flow-item {
+  margin-top: 5rem;
+
+  @include mobile-window {
+    margin-top: 3rem;
+  }
+}
+
+.flow-item__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 4rem;
+  width: 49rem;
+  background-color: $color-white;
+  border: 3px solid $color-primary;
+
+  @include mobile-window {
+    display: block;
+    padding: 1.5rem;
+    width: calc(100% - 4rem);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: $color-secondary;
+
+    @include mobile-window {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  img {
+    width: 12rem;
+
+    @include mobile-window {
+      display: block;
+      margin: 0 auto;
+      width: 8rem;
+    }
+  }
+
+  .body {
+    margin-left: 3rem;
+
+    @include mobile-window {
+      margin-top: 2rem;
+      margin-left: 0;
+    }
+  }
+
+  .title__wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  .num {
+    padding: 1.598rem 1.4rem;
+    font-size: 0;
+    background-color: $color-secondary;
+    border-radius: 50%;
+
+    @include mobile-window {
+      padding: 1.253rem 1rem;
+    }
+
+    span:nth-of-type(1) {
+      display: block;
+      font-family: $lato;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $color-white;
+      line-height: 1;
+      text-align: center;
+      letter-spacing: .2rem;
+
+      @include mobile-window {
+        font-size: .8rem;
+      }
+    }
+
+    span:nth-of-type(2) {
+      display: block;
+      font-family: $lato;
+      font-size: 2rem;
+      font-weight: bold;
+      color: $color-white;
+      line-height: 1;
+      text-align: center;
+      letter-spacing: .2rem;
+
+      @include mobile-window {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .title {
+    padding: 0 0 0 2rem;
+    font-size: 1.8rem;
+    color: $color-black;
+    font-weight: bold;
+
+    @include mobile-window {
+      font-size: 1.4rem;
+    }
+  }
+
+  .text {
+    padding: 2rem 0 0;
+    font-size: 1.4rem;
+    color: $color-black;
+
+    @include mobile-window {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.flow-item:nth-of-type(1) {
+  .flow-item__box {
+    margin-left: auto;
+
+    &::before {
+      left: -6rem;
+
+      @include mobile-window {
+        left: -3.8rem;
+      }
+    }
+  }
+}
+
+.flow-item:nth-of-type(2) {
+  .flow-item__box {
+    margin-right: auto;
+
+    @include mobile-window {
+      margin-right: 0;
+      margin-left: auto;
+    }
+
+    &::before {
+      right: -6rem;
+
+      @include mobile-window {
+        right: inherit;
+        left: -3.8rem;
+      }
+    }
+  }
+}
+
+.flow-item:nth-of-type(3) {
+  .flow-item__box {
+    margin-left: auto;
+
+    &::before {
+      left: -6rem;
+
+      @include mobile-window {
+        left: -3.8rem;
+      }
+    }
+  }
+}
+
+.flow-item:nth-of-type(4) {
+  .flow-item__box {
+    margin-right: auto;
+
+    @include mobile-window {
+      margin-right: 0;
+      margin-left: auto;
+    }
+
+    &::before {
+      right: -6rem;
+
+      @include mobile-window {
+        right: inherit;
+        left: -3.8rem;
+      }
+    }
+  }
+}
+
+.flow-item:nth-of-type(5) {
+  .flow-item__box {
+    margin-left: auto;
+
+    &::before {
+      left: -6rem;
+
+      @include mobile-window {
+        left: -3.8rem;
+      }
+    }
+  }
+}
+
+.flow-item:nth-of-type(6) {
+  .flow-item__box {
+    margin-right: auto;
+
+    @include mobile-window {
+      margin-right: 0;
+      margin-left: auto;
+    }
+
+    &::before {
+      right: -6rem;
+
+      @include mobile-window {
+        right: inherit;
+        left: -3.8rem;
+      }
+    }
+  }
+}
+
+.flow-item:nth-of-type(7) {
+  .flow-item__box {
+    margin-left: auto;
+
+
+    &::before {
+      left: -6rem;
+
+      @include mobile-window {
+        left: -3.8rem;
+      }
+    }
+  }
+}

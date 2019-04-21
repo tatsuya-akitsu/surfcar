@@ -1,0 +1,47 @@
+section.confirm {
+
+  .inner {
+    margin: 0 auto;
+    max-width: 620px;
+
+    @include mobile-window {
+      max-width: 100%;
+    }
+  }
+
+  .confirm-text {
+    padding-bottom: 4rem;
+    font-family: $font-init;
+    font-size: 1.6rem;
+    text-align: left;
+  }
+
+  .form {
+    max-width: inherit;
+  }
+}
+
+.confirm-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
+
+  &:nth-last-of-type(1) {
+    padding: 1rem 0 0;
+    border-bottom: none;
+  }
+}
+
+.confirm-label {
+  display: none;
+}
+
+input[name="mailform_token"] ~ p {
+  margin-top: 3rem;
+}
+
+.confirm-value {
+  padding: 0 1rem;
+  font-size: 1.4rem;
+  color: $color-black;
+  text-align: left;
+}

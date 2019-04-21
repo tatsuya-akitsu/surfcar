@@ -1,51 +1,94 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-    <meta name="format-detection" content="telephone=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <!-- ogp -->
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:site_name" content="">
-    <meta property="og:locale" content="ja_JP">
-    <meta property="og:url" content="">
-    <meta name="twitter:url" content="">
-    <meta property="og:image" content="">
-    <meta name="twitter:image:src" content="">
-    <meta name="author" content="">
 
-    <!-- ogp & twitter -->
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="ja_JP">
-    <meta property="fb:app_id" content="">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="">
-    <meta name="twitter:creator" content="">
-    <meta name="twitter:domain" content="">
-    <meta property="og:site_name" content="">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!-- ogp -->
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:url" content="">
+  <meta name="twitter:url" content="">
+  <meta property="og:image" content="">
+  <meta name="twitter:image:src" content="">
+  <meta name="author" content="">
 
-    <!-- css -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/filipelinhares/ress/master/dist/ress.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- Android用明朝体フォント -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
+  <!-- ogp & twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="fb:app_id" content="">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:creator" content="">
+  <meta name="twitter:domain" content="">
+  <meta property="og:site_name" content="">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./js/rem.min.js"></script>
-    <title>SurfCar</title>
-  </head>
-  <body>
-    <nav>
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/filipelinhares/ress/master/dist/ress.min.css">
+  <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="./css/slick-theme.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Android用明朝体フォント -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./js/rem.min.js"></script>
+  <title>SurfCar</title>
+</head>
+
+<body>
+  <div id="loader" class="loader">
+    <div id="loaderInner" class="loader__inner">
+      <img src="./img/logo.svg" alt="SurfCar" class="loader__logo" />
+      <p>Loading..</p>
+    </div>
+  </div>
+  <div id="wrap" class="main-wrap">
+    <nav class="js-nav is-pc">
       <a href="#header" class="nav-logo">SurfCarSystem</a>
       <ul class="nav-list">
-        <li><a href="#system"><p class="en">SYSTEM</p><p class="ja">システム</p></a></li>
-        <li><a href="#lease"><p class="en">COMPARE LEASE</p><p class="ja">リースと比較</p></a></li>
-        <li><a href="#loan"><p class="en">COMPARE LOAN</p><p class="ja">ローンと比較</p></a></li>
+        <li><a href="#system">
+            <p class="en">SYSTEM</p>
+            <p class="ja">システム</p>
+          </a></li>
+        <li><a href="#lease">
+            <p class="en">COMPARE LEASE</p>
+            <p class="ja">リースと比較</p>
+          </a></li>
+        <li><a href="#loan">
+            <p class="en">COMPARE LOAN</p>
+            <p class="ja">ローンと比較</p>
+          </a></li>
+        <!-- <li><a href="#contact" class="c-button c-button--contact">
+            <p class="en">ESTIMATE</p>
+            <p class="ja">お見積り</p>
+          </a></li> -->
+      </ul>
+    </nav>
+    <nav class="js-nav js-nav--sp is-sp">
+      <ul class="nav-list">
+        <li><a href="#system">
+            <img src="./img/icons/system.svg" alt="">
+            <p class="ja">システム</p>
+          </a></li>
+        <li><a href="#lease">
+            <img src="./img/icons/lease.svg" alt="">
+            <p class="ja">リースと比較</p>
+          </a></li>
+        <li><a href="#loan">
+            <img src="./img/icons/loan.svg" alt="">
+            <p class="ja">ローンと比較</p>
+          </a></li>
+        <!-- <li><a href="#contact" class="c-button c-button--contact">
+            <img src="./img/icons/email.svg" alt=""></a></li> -->
       </ul>
     </nav>
     <header id="header" class="header js-header">
@@ -58,119 +101,1680 @@
           Surf Car System
         </h1>
         <div class="header-carousel__wrap">
-          <div class="carousel-thumb__wrap">
-            <div class="carousel-thumb__item">
-              <img src="../img/carousel/ferrari_488spider__blue.png" alt="ferrari 488 spider" />
-              <div class="carousel__body">
-                <p class="amount"><span>月額</span>16,900円コース</p>
-                <p class="en">Ferrari 488Spider</p>
-                <p class="ja">フェラーリ 488スパイダー</p>
-              </div>
+          <div class="carousel-thumb__item js-thumb__item carousel__item--01">
+            <img src="./img/carousel/ferrari_488spider__blue.png" alt="ferrari 488 spider" />
+            <div class="carousel__body">
+              <p class="amount"><span>月額</span>169,000円コース</p>
+              <p class="en">Ferrari 488Spider</p>
+              <p class="ja">フェラーリ 488スパイダー</p>
             </div>
           </div>
-          <div class="carousel-thumb__wrap">
-            <div class="carousel-thumb__item">
-              <img src="../img/carousel/maserati_ghibli__blue.png" alt="maserati ghibli" />
-              <div class="carousel__body">
-                <p class="amount"><span>月額</span>110,000円コース</p>
-                <p class="en">Maserati Ghibli</p>
-                <p class="ja">マセラティ ギブリ</p>
-              </div>
+          <div class="carousel-thumb__item js-thumb__item carousel__item--02">
+            <img src="./img/carousel/maserati_ghibli__blue.png" alt="maserati ghibli" />
+            <div class="carousel__body">
+              <p class="amount"><span>月額</span>110,000円コース</p>
+              <p class="en">Maserati Ghibli</p>
+              <p class="ja">マセラティ ギブリ</p>
             </div>
           </div>
-          <div class="carousel-thumb__wrap">
-            <div class="carousel-thumb__item">
-              <img src="../img/carousel/m-benz_s300h__blue.png" alt="mercedes benz s300h" />
-              <div class="carousel__body">
-                <p class="amount"><span>月額</span>110,000円コース</p>
-                <p class="en">Mercedes-Benz S300h</p>
-                <p class="ja">メルセデスベンツ S300h</p>
-              </div>
+          <div class="carousel-thumb__item js-thumb__item carousel__item--03">
+            <img src="./img/carousel/m-benz_s300h__blue.png" alt="mercedes benz s300h" />
+            <div class="carousel__body">
+              <p class="amount"><span>月額</span>110,000円コース</p>
+              <p class="en">Mercedes-Benz S300h</p>
+              <p class="ja">メルセデスベンツ S300h</p>
             </div>
           </div>
-          <div class="carousel-thumb__wrap">
-            <div class="carousel-thumb__item">
-              <img src="../img/carousel/bmw_740__blue.png" alt="BMW 740i" />
-              <div class="carousel__body">
-                <p class="amount"><span>月額</span>110,000円コース</p>
-                <p class="en">BMW 740i</p>
-                <p class="ja">BMW 740i</p>
-              </div>
+          <div class="carousel-thumb__item js-thumb__item carousel__item--04">
+            <img src="./img/carousel/bmw_740__blue.png" alt="BMW 740i" />
+            <div class="carousel__body">
+              <p class="amount"><span>月額</span>110,000円コース</p>
+              <p class="en">BMW 740i</p>
+              <p class="ja">BMW 740i</p>
             </div>
           </div>
-          <div class="carousel-thumb__wrap">
-            <div class="carousel-thumb__item">
-              <img src="../img/carousel/m-benz_e__blue.png" alt="mercedes benz e class" />
-              <div class="carousel__body">
-                <p class="amount"><span>月額</span>90,000円コース</p>
-                <p class="en">Mercedes-Benz E Class</p>
-                <p class="ja">メルセデスベンツ E クラス</p>
-              </div>
+          <div class="carousel-thumb__item js-thumb__item carousel__item--05">
+            <img src="./img/carousel/m-benz_e__blue.png" alt="mercedes benz e class" />
+            <div class="carousel__body">
+              <p class="amount"><span>月額</span>90,000円コース</p>
+              <p class="en">Mercedes-Benz E Class</p>
+              <p class="ja">メルセデスベンツ E クラス</p>
             </div>
           </div>
-          <div class="carousel-thumb__wrap">
-            <div class="carousel-thumb__item">
-              <img src="../img/carousel/bmw_5__blue.png" alt="BMW 5 serios" />
-              <div class="carousel__body">
-                <p class="amount"><span>月額</span>90,000円コース</p>
-                <p class="en">BMW 5 Series</p>
-                <p class="ja">BMW 5シリーズ</p>
-              </div>
+          <div class="carousel-thumb__item js-thumb__item carousel__item--06">
+            <img src="./img/carousel/bmw_5__blue.png" alt="BMW 5 serios" />
+            <div class="carousel__body">
+              <p class="amount"><span>月額</span>90,000円コース</p>
+              <p class="en">BMW 5 Series</p>
+              <p class="ja">BMW 5シリーズ</p>
             </div>
           </div>
         </div>
       </div>
       <div class="carousel-dots">
-        <div class="carousel-dots__item">
+        <div class="carousel-dots__item dots__item--01">
           <div class="carousel__item__inner">
             <p class="name">フェラーリ 488スパイダー</p>
-            <img src="../img/carousel/dots/ferrari_488spider.png" alt="ferrari 488spider" />
+            <img src="./img/carousel/dots/ferrari_488spider.png" alt="ferrari 488spider" />
             <span class="amount">月額</span>
-            <p class="course">16,900円コース</p>
+            <p class="course">169,000円コース</p>
           </div>
         </div>
-        <div class="carousel-dots__item">
+        <div class="carousel-dots__item dots__item--02">
           <div class="carousel__item__inner">
             <p class="name">マセラティ ギブリ</p>
-            <img src="../img/carousel/dots/maserati_ghibli.png" alt="maserati ghibli" />
+            <img src="./img/carousel/dots/maserati_ghibli.png" alt="maserati ghibli" />
             <span class="amount">月額</span>
             <p class="course">110,000円コース</p>
           </div>
         </div>
-        <div class="carousel-dots__item">
+        <div class="carousel-dots__item dots__item--03">
           <div class="carousel__item__inner">
             <p class="name">メルセデスベンツ S300h</p>
-            <img src="../img/carousel/dots/m-benz_s300h.png" alt="mercedes-benz s300h" />
+            <img src="./img/carousel/dots/m-benz_s300h.png" alt="mercedes-benz s300h" />
             <span class="amount">月額</span>
             <p class="course">110,000円コース</p>
           </div>
         </div>
-        <div class="carousel-dots__item">
+        <div class="carousel-dots__item dots__item--04">
           <div class="carousel__item__inner">
             <p class="name">BMW 740i</p>
-            <img src="../img/carousel/dots/bmw_740.png" alt="BMW 740i" />
+            <img src="./img/carousel/dots/bmw_740.png" alt="BMW 740i" />
             <span class="amount">月額</span>
             <p class="course">110,000円コース</p>
           </div>
         </div>
-        <div class="carousel-dots__item">
+        <div class="carousel-dots__item dots__item--05">
           <div class="carousel__item__inner">
             <p class="name">メルセデスベンツ Eクラス</p>
-            <img src="../img/carousel/dots/m-benz_e.png" alt="mercedes-benz e class" />
+            <img src="./img/carousel/dots/m-benz_e.png" alt="mercedes-benz e class" />
             <span class="amount">月額</span>
             <p class="course">90,000円コース</p>
           </div>
         </div>
-        <div class="carousel-dots__item">
+        <div class="carousel-dots__item dots__item--06">
           <div class="carousel__item__inner">
             <p class="name">BMW 5シリーズ</p>
-            <img src="../img/carousel/dots/bmw_5.png" alt="bmw 5 series" />
+            <img src="./img/carousel/dots/bmw_5.png" alt="bmw 5 series" />
             <span class="amount">月額</span>
             <p class="course">90,000円コース</p>
           </div>
         </div>
       </div>
     </header>
-    <script src="./js/app.js"></script>
-  </body>
+    <main>
+      <section class="section intro">
+        <div class="wrapper">
+          <h2 class="intro__title"><span class="small">初期費用</span><span class="big">0</span><span class="small">円</span></h2>
+          <div class="inner">
+            <p class="intro__text">
+              月額料金だけで<br class="is-sp">憧れの高級車に乗れるサーフカー。<br>
+              月額50,000円から。<br class="is-sp">他にも多数の車種をご用意しております。
+            </p>
+            <a href="#contact" class="c-button c-button--contact">
+              <p class="ja">お見積りはこちら</p>
+            </a>
+          </div>
+        </div>
+        <div class="media">
+          <div class="thumbnail js-thumbnail">
+            <div class="thumb__inner"></div>
+          </div>
+          <div class="body">
+            <p class="text">
+              フェラーリやランボルギーニなどの最高級車をよりリーズナブルに乗っていただこうと開発した自動車購入システムです。<br>
+              波に乗る（サーフ）ように3年毎に、初期費用などの出費なく、<br>
+              リーズナブルな月額料金のみで憧れの車に次々乗り換えてもらおうと始めたサービスです。
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="system" class="section system">
+        <div class="wrapper">
+          <h2 class="section__title">
+            <p class="en">POINT1</p>
+            <p class="ja">サーフカーシステムってどんなシステムなの？</p>
+          </h2>
+          <div class="inner">
+            <p class="point__intro">
+              surfCarシステムはローンでのご契約となります。<br>
+              ただし弊社オリジナルの変額ローンを利用します。
+            </p>
+            <div class="system-media system-media--01">
+              <div class="img"><img src="./img/system/security.svg" alt=""></div>
+              <div class="body">
+                <p class="title">高額買取保証</p>
+                <p class="text">
+                  サーフカーが3年後にご購入いただいた車を引き取る際に、ローン残債と同額でお引き取りを保証させていただきます。（条件通りお乗りいただくことが前提となります）
+                </p>
+              </div>
+            </div>
+            <div class="system-feature">
+              <div class="system-item system-item--01">
+                <p class="title">法人契約可能</p>
+                <img src="./img/system/agreement.svg" alt="">
+                <p class="subscription">車両が経費で購入できます。</p>
+              </div>
+              <div class="system-item system-item--02">
+                <p class="title">初期費用0円</p>
+                <img src="./img/system/initial_cost.svg" alt="">
+                <p class="subscription">どんな高級車でも初期費用が0円</p>
+              </div>
+              <div class="system-item system-item--03">
+                <p class="title">解約違約金0円</p>
+                <img src="./img/system/cancel.svg" alt="">
+                <p class="subscription">
+                  SurfCarクラブの解約違約金はかかりません。（ただし、中途解約されますと車両の高額買取保証がなくなります）
+                </p>
+              </div>
+              <div class="system-item system-item--04">
+                <p class="title">車検費用0円</p>
+                <img src="./img/system/shaken_hiyo.svg" alt="">
+              </div>
+              <div class="system-item system-item--05">
+                <p class="title">保守費用0円</p>
+                <img src="./img/system/hoshu_hiyo.svg" alt="">
+              </div>
+              <div class="system-item system-item--06">
+                <p class="title">法定点検・整備費用無料</p>
+                <img src="./img/system/hote_tenken.svg" alt="">
+              </div>
+            </div>
+            <div class="system-media system-media--02">
+              <div class="img"><img src="./img/system/monthly_money.svg" alt=""></div>
+              <div class="body">
+                <p class="title">更に月額料金の目安は...</p>
+                <p class="sub">月額料金＝(車両の仕入価格-3年後の車両の販売価格)÷36ヶ月</p>
+                <p class="example">例 <br class="is-sp">(1000万円-800万円)÷36=約5.5万円(月額)</p>
+                <p class="text">
+                  車両で利益を取らないと言う基本方針ですので安心して低価格で高級車に乗ることが出来ます。
+                </p>
+              </div>
+            </div>
+            <div class="system__movie">
+              <iframe src="https://www.youtube-nocookie.com/embed/_aa_ipBwTmE?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section case">
+        <h2 class="section__title--simple">事例のご紹介</h2>
+        <div id="case01" class="case-item" data-delay="10">
+          <div class="case-thumb__wrap">
+            <div class="case-thumb">
+              <img src="./img/case/ferrari_480.png" alt="">
+              <div class="model__name-wrap">
+                <p class="model__name">
+                  フェラーリ488<br>
+                  <span>(新車+オプション多数：35,000円相当)</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="amount">
+              初期費用0円<br>
+              +<br>
+              月額160,000円
+            </p>
+          </div>
+        </div>
+        <div id="case02" class="case-item" data-delay="10">
+          <div class="case-thumb__wrap">
+            <div class="case-thumb">
+              <img src="./img/case/maserati_desel.png" alt="">
+              <div class="model__name-wrap">
+                <p class="model__name">
+                  マセラティ レヴァンテディーゼル
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="amount">
+              初期費用0円<br>
+              +<br>
+              月額130,000円<br>
+              <span>(2017年7月納車実績)</span>
+            </p>
+          </div>
+        </div>
+        <div id="case03" class="case-item" data-delay="10">
+          <div class="case-thumb__wrap">
+            <div class="case-thumb">
+              <img src="./img/case/porsche_macan.png" alt="">
+              <div class="model__name-wrap">
+                <p class="model__name">
+                  ポルシェ マカン
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="amount">
+              初期費用0円<br>
+              +<br>
+              月額80,000円<br>
+              <span>(2017年5月納車実績)</span>
+            </p>
+          </div>
+        </div>
+        <div id="case04" class="case-item" data-delay="10">
+          <div class="case-thumb__wrap">
+            <div class="case-thumb">
+              <img src="./img/case/m-bentz_a180.png" alt="">
+              <div class="model__name-wrap">
+                <p class="model__name">
+                  メルセデスベンツ A180スポーツ
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="amount">
+              初期費用0円<br>
+              +<br>
+              月額50,000円<br>
+              <span>(2017年7月納車実績)</span>
+            </p>
+          </div>
+        </div>
+      </section>
+      <a href="#contact" class="c-button c-button--contact">
+        <p class="ja">お見積りはこちら</p>
+      </a>
+      <section class="section greeting">
+        <div class="wrapper">
+          <h2 class="section__title">
+            <p class="en">代表挨拶</p>
+            <p class="ja">
+              サーフカーを開発した理由を代表挨拶も兼ねて、<br>
+              ご説明します
+            </p>
+          </h2>
+          <div class="inner">
+            <div class="greeting-media">
+              <img src="./img/greeting/greeting.png" alt="">
+              <div class="greeting-body">
+                <p class="title">徹底したユーザー目線で！</p>
+                <p class="text">
+                  皆様、こんにちは！　私はこれまでドコモ・ドコモグループでGPS系サービスや音声認識系サービス、端末、農業、医療等のサービスの企画・開発・販売を行っておりました。今回は新しい会社で新しいサービスを作りチャレンジしております。
+                </p>
+              </div>
+            </div>
+            <div class="greeting-history">
+              <p class="history-title">代表経歴</p>
+              <ul class="history-list">
+                <li class="history-item">法人向け位置情報サービスの企画・開発・販売（docoですcar・iアプリDX for GPS・ビジネスmopera GPSロケーション等）</li>
+                <li class="history-item">ユーザー向け位置情報サービスや端末の企画・開発・販売（キッズケータイ・イマドコサーチ・イマドコかんたんサーチ等）</li>
+                <li class="history-item">音声認識サービスの企画・開発・販売（しゃべって検索・音声クイック起動等）</li>
+                <li class="history-item">LTE内蔵パソコンの販売戦略立案、マイクロソフトとドコモの独占契約に成功</li>
+                <li class="history-item">農業ソリューション「モバイル牛温恵」の企画・販売</li>
+                <li class="history-item">医師認証システム「medパス」医療キュレーションニュース「medy」の企画・開発（株式会社日本アルトマーク・ドコモ 100%子会社）</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section staff">
+        <div class="wrapper">
+          <h2 class="section__title--simple">サーフカーのメンバーを<br class="is-sp">紹介します</h2>
+          <div class="inner">
+            <ul class="staff-list">
+              <li class="staff-item">
+                <div class="staff-media">
+                  <div class="staff-img"><img src="./img/staff/kasai.jpg" alt="香西 隆徳"></div>
+                  <div class="body">
+                    <p class="name"><span>Takanori Kasai</span>香西 隆徳</p>
+                    <p class="birthplace"><span><img src="./img/icons/place.svg" alt="">出身</span>石川県</p>
+                    <p class="hobby"><span><img src="./img/icons/hobby.svg" alt="">趣味</span>ゴルフ･釣り･旅行･ガジェット</p>
+                  </div>
+                </div>
+              </li>
+              <li class="staff-item">
+                <div class="staff-media">
+                  <div class="staff-img"><img src="./img/staff/igarashi.jpg" alt="五十嵐 正晴"></div>
+                  <div class="body">
+                    <p class="name"><span>Masaharu Igarashi</span>五十嵐 正晴</p>
+                    <p class="birthplace"><span><img src="./img/icons/place.svg" alt="">出身</span>東京都目黒区</p>
+                    <p class="hobby"><span><img src="./img/icons/hobby.svg" alt="">趣味</span>ゲーム･散歩･ダンス</p>
+                  </div>
+                </div>
+              </li>
+              <li class="staff-item">
+                <div class="staff-media">
+                  <div class="staff-img"><img src="./img/staff/murakami.jpg" alt="村上 登美子"></div>
+                  <div class="body">
+                    <p class="name"><span>Tomiko Murakami</span>村上 登美子</p>
+                    <p class="birthplace"><span><img src="./img/icons/place.svg" alt="">出身</span>博多</p>
+                    <p class="hobby"><span><img src="./img/icons/hobby.svg" alt="">趣味</span>旅行･パン作り･お菓子作り･映画鑑賞</p>
+                  </div>
+                </div>
+              </li>
+              <li class="staff-item">
+                <div class="staff-media">
+                  <div class="staff-img"><img src="./img/staff/takagi.jpg" alt="高木 和人"></div>
+                  <div class="body">
+                    <p class="name"><span>Kazuto Takagi</span>高木 和人</p>
+                    <p class="birthplace"><span><img src="./img/icons/place.svg" alt="">出身</span>福島県</p>
+                    <p class="hobby"><span><img src="./img/icons/hobby.svg" alt="">趣味</span>極真空手</p>
+                  </div>
+                </div>
+              </li>
+              <li class="staff-item">
+                <div class="staff-media">
+                  <div class="staff-img"><img src="./img/staff/ueda.jpg" alt="植田 隆雅"></div>
+                  <div class="body">
+                    <p class="name"><span>Takamasa Ueda</span>植田 隆雅</p>
+                    <p class="birthplace"><span><img src="./img/icons/place.svg" alt="">出身</span>福岡県生まれ愛知県育ち</p>
+                    <p class="hobby"><span><img src="./img/icons/hobby.svg" alt="">趣味</span>写真撮影･動画撮影･ボクシング･絵描き</p>
+                    <p class="comment">30歳になり、お酒が好きになりました！<br class="is-sp">2杯で酔いつぶれますが…</p>
+                  </div>
+                </div>
+              </li>
+              <li class="staff-item">
+                <div class="staff-media">
+                  <div class="staff-img"><img src="./img/staff/ganaha.jpg" alt="植田 隆雅"></div>
+                  <div class="body">
+                    <p class="name"><span>Chiharu Ganaha</span>我那覇 千春</p>
+                    <p class="birthplace"><span><img src="./img/icons/place.svg" alt="">出身</span>沖縄県</p>
+                    <p class="hobby"><span><img src="./img/icons/hobby.svg" alt="">目標</span>石垣島や宮古島、海外などの旅。</p>
+                    <p class="comment">ファーストクラスで世界一周が当面の目標です。</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <img src="./img/staff/all.jpg" alt="" class="staff-img--all">
+            <a href="#contact" class="c-button c-button--contact">
+              <p class="ja">お見積りはこちら</p>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="section recommendation">
+        <div class="wrapper">
+          <h2 class="section__title--simple">経済界の著名人から推薦文を<br class="is-sp">いただいております</h2>
+          <div class="recommendation-carousel">
+            <div class="carousel-item">
+              <div class="carousel-item__inner">
+                <div class="carouse-item__head is-sp">
+                  <p class="name en">Mitch Carson</p>
+                  <p class="name ja">ミッチ・カーソン</p>
+                </div>
+                <img src="./img/recommendation/m-speaker__photo--mitch.png" alt="">
+                <div class="carousel-item__body">
+                  <div class="carouse-item__head is-pc">
+                    <p class="name en">Mitch Carson</p>
+                    <p class="name ja">ミッチ・カーソン</p>
+                  </div>
+                  <p class="description">
+                    セレブリティーメーカー、マーケッター“サイレントセールスマン”著者<br>4大陸、57か国で1000以上のイベントを開催、延べ100万人以上を動員。ソーシャルメディア、プレスリリース、TV、ラジオ、新聞など多様な媒体を用い、特に本国以外でのプロモートを得意としている。
+                  </p>
+                </div>
+              </div>
+              <div class="recommend-comment">
+                <p class="title">推薦の声</p>
+                <p class="text">
+                  こんなビジネスは今まで聞いたことがない。なぜこのようなビジネスが可能になったのか非常に興味がある。<br>私はベンツが好きなので今度の新型ベンツがいくらですって？10万円強？日本の皆さんが羨ましいです。<br>私の日本の友人達を今度紹介しましょう。
+                </p>
+              </div>
+              <p class="comment">ぜひ、お願いいたします！</p>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-item__inner">
+                <div class="carousel-item__head is-sp">
+                  <p class="name en">Vichai Rommie</p>
+                  <p class="name ja">ヴィチャイ・ロミー</p>
+                </div>
+                <img src="./img/recommendation/m-speaker__photo--vichai.png" alt="">
+                <div class="carousel-item__body">
+                  <div class="carousel-item__head is-pc">
+                    <p class="name en">Vichai Rommie</p>
+                    <p class="name ja">ヴィチャイ・ロミー</p>
+                  </div>
+                  <p class="description">
+                    ロバートキヨサキの師匠である「ブレアシンガー」氏のタイにおける代表者<br>ビジネス・セールスの世界に15年以上携わり、タイにおいてセールス、ステージセールス、トレーナーとしてNo.1とみなされている。
+                  </p>
+                </div>
+              </div>
+              <div class="recommend-comment">
+                <p class="title">推薦の声</p>
+                <p class="text">
+                  非常に特異的な素晴らしいビジネスモデルだ！もしタイでこのようなサービスがあったらすぐに購入したであろう。<br>日本の皆さんが羨ましい。私も日本に住んだらSurfCarで車を買います。<br>香西社長には次回タイでの講演を依頼したいので是非検討をお願いいたします。
+                </p>
+              </div>
+              <p class="comment">喜んで！</p>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-item__inner">
+                <div class="carousel-item__head is-sp">
+                  <p class="name en">Chana Wanichapun</p>
+                  <p class="name ja">チャナ・ワニチャプン</p>
+                </div>
+                <img src="./img/recommendation/m-speaker__photo--chana.png" alt="">
+                <div class="carousel-item__body">
+                  <div class="carousel-item__head is-pc">
+                    <p class="name en">Chana Wanichapun</p>
+                    <p class="name ja">チャナ・ワニチャプン</p>
+                  </div>
+                  <p class="description">
+                    わずか90秒で、見込客の購買行動を発見する「B.A.N.Kプログラム」のアジア初の認定トレーナー<br>彼は多くのトップ企業、大学、ビジネスイベントで講演や研修に招かれており、国際的に活躍。また、ラジオ、テレビ、新聞や、マネーチャンネル、TNNニュース、ドバイニュース、GMマガジン、フォーブス誌などの雑誌に掲載されている。
+                  </p>
+                </div>
+              </div>
+              <div class="recommend-comment">
+                <p class="title">推薦の声</p>
+                <p class="text">
+                  こんな高級車をネットだけで販売し、しかもこんなに売れているとは驚きです。<br>車で利益を取っていないビジネスモデルで会費だけで成り立つとは驚きです。<br>もしタイでこのようなサービスがあったら走行距離の制限はすぐにオーバーしてしまうでしょう。タイ進出を希望いたします。
+                </p>
+              </div>
+              <p class="comment">将来考えておきます。</p>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-item__inner">
+                <div class="carousel-item__head is-sp">
+                  <p class="name en">Justin Teoh</p>
+                  <p class="name ja">ジャスティン・ティオ</p>
+                </div>
+                <img src="./img/recommendation/m-speaker__photo--justin.png" alt="">
+                <div class="carousel-item__body">
+                  <div class="carousel-item__head is-pc">
+                    <p class="name en">Justin Teoh</p>
+                    <p class="name ja">ジャスティン・ティオ</p>
+                  </div>
+                  <p class="description">
+                    オーストラリア発、世界一の動画マーケター<br>トヨタ、JandJ、BHTビリトン、三菱、ワーナーブラザーズ、KFC、MTV、さらにはYouTubeなど、世界各国の大企業のCM動画を製作！
+                    動画での通常10％前後と言われる成約率を、最大80％にまで跳ね上げるテンプレートを開発。
+                  </p>
+                </div>
+              </div>
+              <div class="recommend-comment">
+                <p class="title">推薦の声</p>
+                <p class="text">
+                  世界の名車をこんなに安く乗れるとは驚きだ。<br>香西社長のアイディアの超高級車をVR動画で撮影すればさらに面白い世界初のVR動画マーケティングもできるだろう！<br>とても期待しています。出来上がったら教えてください。
+                </p>
+              </div>
+              <p class="comment">喜んで！</p>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-item__inner">
+                <div class="carousel-item__head is-sp">
+                  <p class="name en">Mickael Bolduc</p>
+                  <p class="name ja">マイケル・ボルダック</p>
+                </div>
+                <img src="./img/recommendation/m-speaker__photo--mickael.png" alt="">
+                <div class="carousel-item__body">
+                  <div class="carousel-item__head is-pc">
+                    <p class="name en">Mickael Bolduc</p>
+                    <p class="name ja">マイケル・ボルダック</p>
+                  </div>
+                  <p class="description">
+                    世界No.1!コーチング会社の副社長を歴任<br>
+                    アンソニーロビンズも認める目標達成エキスパート<br>
+                    最短最速で目標を達成させるサクセスコーチ！ <br>
+                    過去10年以上にわたってピークパフォーマンスコーチとしてだけでなく、コンサルタント会社の創業経営者、講演家、著述家などとしても活動。
+                  </p>
+                </div>
+              </div>
+              <div class="recommend-comment">
+                <p class="title">推薦の声</p>
+                <p class="text">
+                  コンサルタントとして長いこと仕事をしていたが、このようなビジネスは聞いたことがなく、間違いなく大成功するであろう。（ありがとうございます）<br>社長のコンサルタント経験が活かされており、その行動力には敬服します。<br>全面的に応援いたします。
+                </p>
+              </div>
+              <p class="comment">ぜひ、お願いいたします！</p>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-item__inner">
+                <div class="carousel-item__head is-sp">
+                  <p class="name ja">島田晴雄</p>
+                </div>
+                <img src="./img/recommendation/simada.png" alt="">
+                <div class="carousel-item__body">
+                  <div class="carousel-item__head is-pc">
+                    <p class="name ja">島田晴雄</p>
+                  </div>
+                  <p class="description">
+                    日本の経済学者。首都大学東京理事長、慶應義塾大学名誉教授。前千葉商科大学学長。専門は、労働経済学、日本経済論、経済政策として各方面で活躍中。
+                  </p>
+                </div>
+              </div>
+              <div class="recommend-comment">
+                <p class="title">推薦の声</p>
+                <p class="text">
+                  なんと面白いビジネスモデルを考えたものです。大変面白いです。<br>今度、うちの事務所に来てもっと詳しく説明して欲しい。<br>そして日本の自動車産業をもっと盛り上げて欲しいものです。応援しています。
+                </p>
+              </div>
+              <p class="comment">もっと頑張ります！</p>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-item__inner">
+                <div class="carousel-item__head is-sp">
+                  <p class="name ja">ドクター中松</p>
+                </div>
+                <img src="./img/recommendation/sir_nakamatsu.png" alt="">
+                <div class="carousel-item__body">
+                  <div class="carousel-item__head is-pc">
+                    <p class="name ja">ドクター中松</p>
+                  </div>
+                  <p class="description">
+                    日本の発明家、実業家である。「ドクター中松創研」代表取締役、日本文化振興会第10代会長、国際発明協会および世界天才会議の主宰者である。
+                  </p>
+                </div>
+              </div>
+              <div class="recommend-comment">
+                <p class="title">推薦の声</p>
+                <p class="text">
+                  なんで、こんな事ができるのだ？<br>なるほど、面白い。私のフロッピー並みの大発明家だな、君は！<br>一緒に写真を撮ろう。
+                </p>
+              </div>
+              <p class="comment">お褒め頂き光栄です</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="lease" class="section lease">
+        <div class="wrapper">
+          <h2 class="section__title">
+            <p class="en">POINT2</p>
+            <p class="ja">リース購入と<br class="is-sp">比較してみると</p>
+          </h2>
+          <div class="inner">
+            <!-- <p class="point__intro">
+              サーフカーがどのくらいオトクなのか･･･<br>
+              リース購入や残価設定型ローンでの購入と比較してみました！
+            </p> -->
+            <!-- <div class="compare-case__wrap">
+              <h3 class="c-ttl--h3">リースで購入する特徴</h3>
+              <div class="compare-case__inner">
+                <table class="is-simple">
+                  <tbody>
+                    <tr>
+                      <th>頭金</th>
+                      <td>0円</td>
+                    </tr>
+                    <tr>
+                      <th>車検費用</th>
+                      <td>リース料金込なので、0円</td>
+                    </tr>
+                    <tr>
+                      <th>その他費用</th>
+                      <td>税金、車検、メンテナンス、自賠責保険に絡む費用が翌年度以降に発生する</td>
+                    </tr>
+                    <tr>
+                      <th>契約期間</th>
+                      <td>5年（中には3年プランもあり）</td>
+                    </tr>
+                    <tr>
+                      <th>違約金</th>
+                      <td>事故時や途中退会などで、車両価格の約50%を違約金として発生する。違約金がかかるため、経済状況が変わった等の理由でも、乗り換えたいときに乗り換えられない</td>
+                    </tr>
+                    <tr>
+                      <th>残価設定額</th>
+                      <td>車両価格の40%~45%</td>
+                    </tr>
+                    <tr>
+                      <th>残価価格の精算</th>
+                      <td>多額になることが多い</td>
+                    </tr>
+                    <tr>
+                      <th>月額費用</th>
+                      <td>車両価格の1/85が目安</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div> -->
+            <!-- <div class="compare-case__wrap">
+              <h3 class="c-ttl--h3">リースの具体的購入例</h3>
+              <div class="compare-case__inner">
+                <p class="compare__text">国産の3ナンバーの車をリースで購入する場合（車両価格：約8,000,000円）※解約金等は省略</p>
+                <div class="compare__purchase__wrap is-ferrari">
+                  <div class="compare__inner">
+                    <p class="title">実際にかかる費用</p>
+                    <table class="is-simple">
+                      <tbody>
+                        <tr>
+                          <th>初期費用：</th>
+                          <td>0円</td>
+                        </tr>
+                        <tr>
+                          <th>月額費用：</th>
+                          <td>100,000円前後</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p class="caution">サーフカーでは150,000円からフェラーリに乗ることが可能</p>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <div class="compare-case__wrap">
+              <h3 class="c-ttl--h3">サーフカーとリース購入の比較表</h3>
+              <div class="compare-case__inner case__inner--sp">
+                <div class="compare-table">
+                  <div class="compare-table__box">
+                    <p class="name">
+                      SurfCar
+                      <span>サーフカー</span>
+                    </p>
+                    <figure class="table-figure"><img src="./img/comparetion/compare__img__01.svg" alt="" /></figure>
+                    <div class="inner">
+                      <div class="table-item">
+                        <p class="item">契約期間</p>
+                        <p class="detail">3年</p>
+                        <img src="./img/comparetion/icons/circle--color.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">節税効果</p>
+                        <p class="detail">定率法</p>
+                        <img src="./img/comparetion/icons/triangle--color.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">途中解約</p>
+                        <p class="detail">可能（違約金なし）</p>
+                        <img src="./img/comparetion/icons/circle--color.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">初期費用</p>
+                        <p class="detail">0円</p>
+                        <img src="./img/comparetion/icons/circle--color.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">車検費用</p>
+                        <p class="detail">0円</p>
+                        <img src="./img/comparetion/icons/circle--color.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">途中退会の違約金</p>
+                        <p class="detail">0円</p>
+                        <img src="./img/comparetion/icons/circle--color.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">事故時の違約金</p>
+                        <p class="detail">0円</p>
+                        <img src="./img/comparetion/icons/circle--color.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">乗り換えはできるか</p>
+                        <p class="detail">可能</p>
+                        <img src="./img/comparetion/icons/circle--color.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">残価設定額</p>
+                        <p class="detail">80%</p>
+                        <img src="./img/comparetion/icons/circle--color.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">終了時の精算</p>
+                        <p class="detail">0円</p>
+                        <img src="./img/comparetion/icons/circle--color.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">月額料金（目安）</p>
+                        <p class="detail">車両価格の1/200</p>
+                        <img src="./img/comparetion/icons/circle--color.svg" alt="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="compare-table__box">
+                    <p class="name">
+                      LeaseBuy
+                      <span>リース購入</span>
+                    </p>
+                    <figure class="table-figure"><img src="./img/comparetion/compare__img__02.svg" alt="" /></figure>
+                    <div class="inner">
+                      <div class="table-item">
+                        <p class="item">契約期間</p>
+                        <p class="detail">5年</p>
+                        <img src="./img/comparetion/icons/ban.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">節税効果</p>
+                        <p class="detail">全額控除</p>
+                        <img src="./img/comparetion/icons/circle.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">途中解約</p>
+                        <p class="detail">不可（解約の場合、多額の違約金が発生）</p>
+                        <img src="./img/comparetion/icons/ban.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">初期費用</p>
+                        <p class="detail">0円</p>
+                        <img src="./img/comparetion/icons/circle.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">車検費用</p>
+                        <p class="detail">リースの月額に込</p>
+                        <img src="./img/comparetion/icons/triangle.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">途中退会の違約金</p>
+                        <p class="detail">車両価格の50%</p>
+                        <img src="./img/comparetion/icons/circle.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">事故時の違約金</p>
+                        <p class="detail">車両価格の50%</p>
+                        <img src="./img/comparetion/icons/circle.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">乗り換えはできるか</p>
+                        <p class="detail">不可</p>
+                        <img src="./img/comparetion/icons/circle.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">残価設定額</p>
+                        <p class="detail">40~45%</p>
+                        <img src="./img/comparetion/icons/circle.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">終了時の精算</p>
+                        <p class="detail">あり</p>
+                        <img src="./img/comparetion/icons/circle.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">月額料金（目安）</p>
+                        <p class="detail">車両価格の1/85<span>※SurfCarの2~2.5倍の金額</span></p>
+                        <img src="./img/comparetion/icons/circle.svg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="table-caution__text">※株式会社Feemo調べ</p>
+              </div>
+            </div>
+            <!-- <div class="compare-case__wrap">
+              <h3 class="c-ttl--h3">ランボルギーニの購入シュミレーションを立ててみました</h3>
+              <div class="compare-case__inner">
+                <div class="compare__purchase__wrap is-lamborghini">
+                  <div class="compare__inner case__inner--sp">
+                    <p class="text">ランボルギーニ本体価格：32,682,960円</p>
+                    <div class="compare-table">
+                      <div class="compare__box">
+                        <p class="name">&nbsp;</p>
+                        <p class="name">月額</p>
+                        <p class="name">支払い総額<br>(契約満了時)</p>
+                        <p class="name">残価設定率</p>
+                      </div>
+                      <div class="compare__box js-compare__box--surfcar02">
+                        <p class="name">SurfCar<span>サーフカー</span></p>
+                        <p class="name">18万</p>
+                        <p class="name">648万</p>
+                        <p class="name">81%</p>
+                      </div>
+                      <div class="compare__box">
+                        <p class="name">LeaseBuy<span>リース購入</span></p>
+                        <p class="name">40万</p>
+                        <p class="name">2,415万</p>
+                        <p class="name">40%</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+      <section id="loan" class="section loan">
+        <div class="wrapper">
+          <h2 class="section__title">
+            <p class="en">POINT3</p>
+            <p class="ja">残高設定型ローンと<br class="is-sp">比較してみると</p>
+          </h2>
+          <div class="inner">
+            <!-- <div class="compare-case__wrap">
+              <h3 class="c-ttl--h3">残高設定型購入する特徴</h3>
+              <div class="compare-case__inner">
+                <table class="is-simple">
+                  <tbody>
+                    <tr>
+                      <th>頭金</th>
+                      <td>車両価格の約20%~30%</td>
+                    </tr>
+                    <tr>
+                      <th>車検費用</th>
+                      <td>必要</td>
+                    </tr>
+                    <tr>
+                      <th>その他費用</th>
+                      <td>自賠責保険、自動車税</td>
+                    </tr>
+                    <tr>
+                      <th>契約期間</th>
+                      <td>5年</td>
+                    </tr>
+                    <tr>
+                      <th>違約金</th>
+                      <td>特になし。残価設定の関係から差額が発生した場合のみ差額金の支払い</td>
+                    </tr>
+                    <tr>
+                      <th>残価設定額</th>
+                      <td>車両価格の50%~60%</td>
+                    </tr>
+                    <tr>
+                      <th>残価価格の精算</th>
+                      <td>発生しないことが多い</td>
+                    </tr>
+                    <tr>
+                      <th>月額費用</th>
+                      <td>車両やローン年数によって不規則</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div> -->
+            <!-- <div class="compare-case__wrap">
+              <h3 class="c-ttl--h3">残価設定型ローンの<br class="is-sp">具体的購入例</h3>
+              <div class="compare-case__inner">
+                <div class="system-media">
+                  <div class="img"><img src="./img/loan/car.svg" alt=""></div>
+                  <div class="body">
+                    <p class="title--small">例えば1000万円の車を購入するとします。契約満期になった際に、残価設定額が車両価格の50～55%なので</p>
+                    <p class="text">
+                      500万~600万円での買取を保証してくれる<br>
+                      ※正確には、残りのローンを上記金額分相殺してくれる。<br>
+                      実際の売価が当初設定した額を下回った場合、ローン残債との差額を金額負担をしなければいけないことも。
+                    </p>
+                    <p class="caution">
+                      サーフカーは更に高額な残価設定をしているにも関わらず、ローン残債と同額で買取保証をしてくれます。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <div class="compare-case__wrap">
+              <h3 class="c-ttl--h3">サーフカーと残価設定型ローン購入の比較表</h3>
+              <div class="compare-case__inner case__inner--sp">
+                <div class="compare-table">
+                  <div class="compare-table__box">
+                    <p class="name">
+                      SurfCar
+                      <span>サーフカー</span>
+                    </p>
+                    <figure class="table-figure"><img src="./img/comparetion/compare__img__01.svg" alt="" /></figure>
+                    <div class="inner">
+                      <div class="table-item">
+                        <p class="item">契約期間</p>
+                        <p class="detail">3年</p>
+                        <img src="./img/comparetion/icons/circle--color.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">節税効果</p>
+                        <p class="detail">定率法</p>
+                        <img src="./img/comparetion/icons/triangle--color.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">途中解約</p>
+                        <p class="detail">可能（違約金なし）</p>
+                        <img src="./img/comparetion/icons/circle--color.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">初期費用</p>
+                        <p class="detail">0円</p>
+                        <img src="./img/comparetion/icons/circle--color.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">車検費用</p>
+                        <p class="detail">0円</p>
+                        <img src="./img/comparetion/icons/circle--color.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">途中退会の違約金</p>
+                        <p class="detail">0円</p>
+                        <img src="./img/comparetion/icons/circle--color.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">事故時の違約金</p>
+                        <p class="detail">0円</p>
+                        <img src="./img/comparetion/icons/circle--color.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">乗り換えはできるか</p>
+                        <p class="detail">可能</p>
+                        <img src="./img/comparetion/icons/circle--color.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">残価設定額</p>
+                        <p class="detail">80%</p>
+                        <img src="./img/comparetion/icons/circle--color.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">終了時の精算</p>
+                        <p class="detail">0円</p>
+                        <img src="./img/comparetion/icons/circle--color.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">月額料金（目安）</p>
+                        <p class="detail">車両価格の1/200</p>
+                        <img src="./img/comparetion/icons/circle--color.svg" alt="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="compare-table__box">
+                    <p class="name">
+                      Residual<br>ValueConfiguration
+                      <span>残価設定型ローン</span>
+                    </p>
+                    <figure class="table-figure"><img src="./img/comparetion/compare__img__03.svg" alt="" /></figure>
+                    <div class="inner">
+                      <div class="table-item">
+                        <p class="item">契約期間</p>
+                        <p class="detail">5年</p>
+                        <img src="./img/comparetion/icons/ban.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">節税効果</p>
+                        <p class="detail">定率法</p>
+                        <img src="./img/comparetion/icons/triangle.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">途中解約</p>
+                        <p class="detail">残価設定額と差額の支払い</p>
+                        <img src="./img/comparetion/icons/triangle.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">初期費用</p>
+                        <p class="detail">車両価格の30%程度&自賠責などの諸経費</p>
+                        <img src="./img/comparetion/icons/ban.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">車検費用</p>
+                        <p class="detail">別途</p>
+                        <img src="./img/comparetion/icons/ban.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">途中退会の違約金</p>
+                        <p class="detail">0円</p>
+                        <img src="./img/comparetion/icons/circle.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">事故時の違約金</p>
+                        <p class="detail">0円</p>
+                        <img src="./img/comparetion/icons/circle.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">乗り換えはできるか</p>
+                        <p class="detail">可能</p>
+                        <img src="./img/comparetion/icons/circle.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">残価設定額</p>
+                        <p class="detail">50~60%</p>
+                        <img src="./img/comparetion/icons/triangle.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">終了時の精算</p>
+                        <p class="detail">残価設定額と差額の支払い</p>
+                        <img src="./img/comparetion/icons/ban.svg" alt="">
+                      </div>
+                      <div class="table-item">
+                        <p class="item">月額料金（目安）</p>
+                        <p class="detail">車両やローン年数によって不規則</p>
+                        <img src="./img/comparetion/icons/circle.svg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="compare-case__wrap">
+              <h3 class="c-ttl--h3">ランボルギーニの購入シュミレーションを立ててみました</h3>
+              <div class="compare-case__inner">
+                <div class="compare__purchase__wrap is-lamborghini">
+                  <div class="compare__inner case__inner--sp">
+                    <p class="text">ランボルギーニ本体価格：32,682,960円</p>
+                    <div class="compare-table">
+                      <div class="compare__box">
+                        <p class="name">&nbsp;</p>
+                        <p class="name">月額</p>
+                        <p class="name">支払い総額<br>(契約満了時)</p>
+                        <p class="name">残価設定率</p>
+                      </div>
+                      <div class="compare__box js-compare__box--surfcar04">
+                        <p class="name">SurfCar<span>サーフカー</span></p>
+                        <p class="name">18万</p>
+                        <p class="name">648万</p>
+                        <p class="name">81%</p>
+                      </div>
+                      <div class="compare__box">
+                        <p class="name">Residual<br>ValueConfiguration<span>残価設定型ローン</span></p>
+                        <p class="name">41万</p>
+                        <p class="name">1,450万</p>
+                        <p class="name">60%</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+      <a href="#contact" class="c-button c-button--contact">
+        <p class="ja">お見積りはこちら</p>
+      </a>
+      <section class="section voice">
+        <div class="wrapper">
+          <h2 class="section__title--simple">お客様の声</h2>
+          <div class="inner">
+            <p class="voice__title">フェラーリ カリフォルニアT</p><br>
+            <p class="voice__title">200,000円コース</p>
+            <div class="voice__wrap">
+              <div class="voice__movie">
+                <iframe src="https://www.youtube-nocookie.com/embed/fWCr0CibvlI?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="voice-info__box">
+                <p class="name">東京都　不動産経営　白井様</p>
+                <p class="text">フェラーリがこの月額で乗れるとは思ってもいませんでした。<br>男の子の夢を叶える、素晴らしいシステムだと思います。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="flow" class="section flow">
+        <div class="wrapper">
+          <h2 class="section__title--simple">ご契約･納車までの流れ</h2>
+          <div class="inner">
+            <ul class="flow-list js-flow-list">
+              <li class="flow-item">
+                <div class="flow-item__box">
+                  <img src="./img/flow/moshikomi.svg" alt="">
+                  <div class="body">
+                    <div class="title__wrap">
+                      <p class="num"><span>STEP</span><span>1</span></p>
+                      <p class="title">お申込み</p>
+                    </div>
+                    <p class="text">当ページの申込みフォームより詳細を記入し、申込ください。</p>
+                  </div>
+                </div>
+              </li>
+              <li class="flow-item">
+                <div class="flow-item__box">
+                  <img src="./img/flow/mitsumori.svg" alt="">
+                  <div class="body">
+                    <div class="title__wrap">
+                      <p class="num"><span>STEP</span><span>2</span></p>
+                      <p class="title">お見積り</p>
+                    </div>
+                    <p class="text">mitsumori@surfcar.jpよりお見積りをご提出いたします。</p>
+                  </div>
+                </div>
+              </li>
+              <li class="flow-item">
+                <div class="flow-item__box">
+                  <img src="./img/flow/doi.svg" alt="">
+                  <div class="body">
+                    <div class="title__wrap">
+                      <p class="num"><span>STEP</span><span>3</span></p>
+                      <p class="title">同意・捺印</p>
+                    </div>
+                    <p class="text">お見積りに同意いただけましたら、捺印していただきます。</p>
+                  </div>
+                </div>
+              </li>
+              <li class="flow-item">
+                <div class="flow-item__box">
+                  <img src="./img/flow/moushikomisho.svg" alt="">
+                  <div class="body">
+                    <div class="title__wrap">
+                      <p class="num"><span>STEP</span><span>4</span></p>
+                      <p class="title">申込書送付</p>
+                    </div>
+                    <p class="text">最終のお申込み書類をメールもしくはFAXでお送りいたします。</p>
+                  </div>
+                </div>
+              </li>
+              <li class="flow-item">
+                <div class="flow-item__box">
+                  <img src="./img/flow/shinsa.svg" alt="">
+                  <div class="body">
+                    <div class="title__wrap">
+                      <p class="num"><span>STEP</span><span>5</span></p>
+                      <p class="title">ローン審査</p>
+                    </div>
+                    <p class="text">審査が通り次第手配開始となります。</p>
+                  </div>
+                </div>
+              </li>
+              <li class="flow-item">
+                <div class="flow-item__box">
+                  <img src="./img/flow/tehai.svg" alt="">
+                  <div class="body">
+                    <div class="title__wrap">
+                      <p class="num"><span>STEP</span><span>6</span></p>
+                      <p class="title">手配開始</p>
+                    </div>
+                    <p class="text">車庫証明等をご確認後、約1〜3ヶ月以内に納車いたします。</p>
+                  </div>
+                </div>
+              </li>
+              <li class="flow-item">
+                <div class="flow-item__box">
+                  <img src="./img/flow/nosha.svg" alt="">
+                  <div class="body">
+                    <div class="title__wrap">
+                      <p class="num"><span>STEP</span><span>7</span></p>
+                      <p class="title">納車</p>
+                    </div>
+                    <p class="text">納車時、ディーラーより直接ご説明し、納車完了となります。</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="section contact">
+        <div class="wrapper">
+          <h2 class="section__title--simple">お見積り</h2>
+          <div class="inner">
+            <form action="mail.php" method="post">
+              <div class="form-wrap">
+                <div class="form-box">
+                  <label>お名前<span class="required-icon">必須</span></label>
+                  <div class="form-item is-vertical form-item--name">
+                    <input type="text" name="name1" id="name01" placeholder="姓" class="input--size-md">
+                    <input type="text" name="name2" id="name02" placeholder="名" class="input--size-md">
+                  </div>
+                </div>
+              </div>
+              <div class="form-wrap">
+                <div class="form-box">
+                  <label>フリガナ<span class="required-icon">必須</span></label>
+                  <div class="form-item is-vertical form-item--kana">
+                    <input type="text" name="kana1" id="kana01" placeholder="セイ" class="input--size-md">
+                    <input type="text" name="kana2" id="kana02" placeholder="メイ" class="input--size-md">
+                  </div>
+                </div>
+              </div>
+              <div class="form-wrap is-vertical">
+                <div class="form-box">
+                  <label>郵便番号<span class="required-icon">必須</span></label>
+                  <div class="form-item form-item--postal">
+                    <input type="number" name="postalCode" placeholder="1234567" id="postal" class="input--size-sm" onKeyUp="AjaxZip3.zip2addr(this,'','prefecture','address');">
+                  </div>
+                  <p class="caution">
+                    ハイフン抜きでご入力ください
+                  </p>
+                </div>
+                <div class="form-box">
+                  <label>都道府県<span class="required-icon">必須</span></label>
+                  <div class="form-item">
+                    <div class="select-wrap input--size-sm is-posR">
+                      <img src="./img/icons/angle.svg" alt="">
+                      <select name="prefecture" id="prefecture">
+                        <option value="北海道">北海道</option>
+                        <option value="青森県">青森県</option>
+                        <option value="岩手県">岩手県</option>
+                        <option value="宮城県">宮城県</option>
+                        <option value="秋田県">秋田県</option>
+                        <option value="山形県">山形県</option>
+                        <option value="福島県">福島県</option>
+                        <option value="茨城県">茨城県</option>
+                        <option value="栃木県">栃木県</option>
+                        <option value="群馬県">群馬県</option>
+                        <option value="埼玉県">埼玉県</option>
+                        <option value="千葉県">千葉県</option>
+                        <option value="東京都">東京都</option>
+                        <option value="神奈川県">神奈川県</option>
+                        <option value="新潟県">新潟県</option>
+                        <option value="富山県">富山県</option>
+                        <option value="石川県">石川県</option>
+                        <option value="福井県">福井県</option>
+                        <option value="山梨県">山梨県</option>
+                        <option value="長野県">長野県</option>
+                        <option value="岐阜県">岐阜県</option>
+                        <option value="静岡県">静岡県</option>
+                        <option value="愛知県">愛知県</option>
+                        <option value="三重県">三重県</option>
+                        <option value="滋賀県">滋賀県</option>
+                        <option value="京都府">京都府</option>
+                        <option value="大阪府">大阪府</option>
+                        <option value="兵庫県">兵庫県</option>
+                        <option value="奈良県">奈良県</option>
+                        <option value="和歌山県">和歌山県</option>
+                        <option value="鳥取県">鳥取県</option>
+                        <option value="島根県">島根県</option>
+                        <option value="岡山県">岡山県</option>
+                        <option value="広島県">広島県</option>
+                        <option value="山口県">山口県</option>
+                        <option value="徳島県">徳島県</option>
+                        <option value="香川県">香川県</option>
+                        <option value="愛媛県">愛媛県</option>
+                        <option value="高知県">高知県</option>
+                        <option value="福岡県">福岡県</option>
+                        <option value="佐賀県">佐賀県</option>
+                        <option value="長崎県">長野県</option>
+                        <option value="熊本県">熊本県</option>
+                        <option value="大分県">大分県</option>
+                        <option value="宮崎県">宮城県</option>
+                        <option value="鹿児島県">鹿児島県</option>
+                        <option value="沖縄県">沖縄県</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-wrap">
+                <div class="form-box">
+                  <label>住所<span class="required-icon">必須</span></label>
+                  <div class="form-item">
+                    <textarea name="address" id="address" class="input--size-xl"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="form-wrap">
+                <div class="form-box">
+                  <label>携帯番号<span class="required-icon">必須</span></label>
+                  <div class="form-item">
+                    <input type="tel" name="tel" placeholder="080-1234-5678" class="input--size-lg">
+                  </div>
+                </div>
+              </div>
+              <div class="form-wrap">
+                <div class="form-box">
+                  <label>メールアドレス<span class="required-icon">必須</span></label>
+                  <div class="form-item">
+                    <input type="email" name="mail" placeholder="@を含んだ半角英数字でご入力ください" class="input--size-lg">
+                  </div>
+                  <p class="caution">
+                    パソコンもしくはスマートフォンのアドレスとしてください<br>
+                    例) example@mail.com
+                  </p>
+                </div>
+              </div>
+              <div class="form-wrap is-vertical form-wrap--model">
+                <div class="form-box">
+                  <label>メーカー<span class="required-icon">必須</span></label>
+                  <div class="form-item">
+                    <div class="select-wrap is-posR">
+                      <img src="./img/icons/angle.svg" alt="">
+                      <select name="maker" id="maker">
+                        <option value="メルセデスベンツ">メルセデスベンツ</option>
+                        <option value="BMW">BMW</option>
+                        <option value="アウディ">アウディ</option>
+                        <option value="フォルクスワーゲン">フォルクスワーゲン</option>
+                        <option value="ポルシェ">ポルシェ</option>
+                        <option value="フェラーリ">フェラーリ</option>
+                        <option value="マセラティ">マセラティ</option>
+                        <option value="ランボルギーニ">ランボルギーニ</option>
+                        <option value="マクラーレン">マクラーレン</option>
+                        <option value="ボルボ">ボルボ</option>
+                        <option value="ランドローバー">ランドローバー</option>
+                        <option value="その他">その他</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-box">
+                  <label>車種・グレード<span class="required-icon">必須</span></label>
+                  <div class="form-item">
+                    <input type="text" name="grade" placeholder="ご希望の車種・グレードをご記入ください" class="input--size-md">
+                  </div>
+                </div>
+              </div>
+              <div class="form-wrap">
+                <div class="form-box">
+                  <label>ボディタイプ<span class="required-icon">必須</span></label>
+                  <div class="form-item is-posR">
+                    <div class="select-wrap select-wrap--body-type input--size-md is-posR">
+                      <img src="./img/icons/angle.svg" alt="">
+                      <select name="type" id="type">
+                        <option value="セダン">セダン</option>
+                        <option value="ワゴン">Bワゴン</option>
+                        <option value="オープンカー">オープンカー</option>
+                        <option value="クーペ">クーペ</option>
+                        <option value="SUV・クロカン">SUV・クロカン</option>
+                        <option value="ハイブリッド">ハイブリッド</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-wrap">
+                <div class="form-box">
+                  <label>その他<span class="required-icon">必須</span></label>
+                  <div class="form-item">
+                    <textarea name="address" id="address" class="input--size-xl" placeholder="色・左右ハンドル・ご希望のオプション・下取車（車種・登録年月・走行距離・希望下取額）のご希望をご記入ください。"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="form-wrap is-vertical">
+                <div class="form-box">
+                  <label>納期<span class="required-icon">必須</span></label>
+                  <div class="form-item">
+                    <div class="select-wrap select-wrap--due-date is-posR">
+                      <img src="./img/icons/angle.svg" alt="">
+                      <select name="deadline" id="deadline" class="input--size-md">
+                        <option value="今すぐ欲しい(2週間以内)">今すぐ欲しい(2週間以内)</option>
+                        <option value="今すぐ欲しいが値段次第(1ヶ月以内)">今すぐ欲しいが値段次第(1ヶ月以内)</option>
+                        <option value="今すぐ欲しいので新古車・中古でも良い(1ヶ月以内)">今すぐ欲しいので新古車・中古でも良い(1ヶ月以内)</option>
+                        <option value="価格を検討してから(3ヶ月以内)">価格を検討してから(3ヶ月以内)</option>
+                        <option value="まだまだ先(3ヶ月以上)">まだまだ先(3ヶ月以上)</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-box">
+                  <label>最大予算の目安（月額）<span class="required-icon">必須</span></label>
+                  <p class="caution">オプションのご提案の参考にさせていただきます。</p>
+                  <div class="form-item">
+                    <div class="select-wrap select-wrap--estimate is-posR">
+                      <img src="./img/icons/angle.svg" alt="">
+                      <select name="guide" id="guide">
+                        <option value="5万円くらい">5万円くらい</option>
+                        <option value="6万円くらい">6万円くらい</option>
+                        <option value="7万円くらい">7万円くらい</option>
+                        <option value="8万円くらい">8万円くらい</option>
+                        <option value="9万円くらい">9万円くらい</option>
+                        <option value="10万円くらい">10万円くらい</option>
+                        <option value="11万円くらい">11万円くらい</option>
+                        <option value="12万円くらい">12万円くらい</option>
+                        <option value="13万円くらい">13万円くらい</option>
+                        <option value="14万円くらい">14万円くらい</option>
+                        <option value="15万円〜">15万円〜</option>
+                        <option value="20万円〜">20万円〜</option>
+                        <option value="25万円〜">25万円〜</option>
+                        <option value="30万円〜">30万円〜</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-wrap is-vertical">
+                <div class="form-box">
+                  <label>購入動機<span class="required-icon">必須</span></label>
+                  <div class="form-item">
+                    <div class="select-wrap select-wrap--incentive is-posR">
+                      <img src="./img/icons/angle.svg" alt="">
+                      <select name="incentive" id="incentive">
+                        <option value="買い増し">買い増し</option>
+                        <option value="車検のため買い替え(下取り車あり)">車検のため買い替え(下取り車あり)</option>
+                        <option value="車検のため買い替え(下取り車なし)">車検のため買い替え(下取り車なし)</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-box form-box--inspection">
+                  <label>次回の車検</label>
+                  <div class="form-item">
+                    <div class="select-wrap select-wrap--date input--size-xs is-posR">
+                      <img src="./img/icons/angle.svg" alt="">
+                      <select name="year" id="year">
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                      </select>
+                    </div>
+                    <span>年</span>
+                    <div class="select-wrap select-wrap--date input--size-xs is-posR">
+                      <img src="./img/icons/angle.svg" alt="">
+                      <select name="month" id="month">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                    </div>
+                    <span>月</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-wrap">
+                <div class="form-box">
+                  <label>契約形態<span class="required-icon">必須</span></label>
+                  <div class="form-item is-posR">
+                    <div class="select-wrap select-wrap--contract input--size-md is-posR">
+                      <img src="./img/icons/angle.svg" alt="">
+                      <select name="contractStyle" id="contractStyle">
+                        <option value="個人契約">個人契約</option>
+                        <option value="法人契約(決算2期必要)">法人契約(決算2期必要)</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="estimate-caution">
+                ※mitsumori@surfcar.jpおよびsupport@mail.surfcar.liveagent.jp よりご返信いたしますので、迷惑メール設定を解除していただくようお願いいたします。
+              </p>
+              <button type="submit" class="c-button c-button--estimate">
+                お申込み
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="section question">
+        <div class="wrapper">
+          <h2 class="section__title--simple">よくある質問</h2>
+          <div class="inner">
+            <div class="question-box">
+              <div class="question-item">
+                <p class="question-text">SurfCarシステムとはなんですか？</p>
+                <p class="question-text">
+                  会員制の買取保証型ローンを利用した新車の販売システムです。3年後の下取り価格を最大80%に設定したお支払いで月のお支払いが低く抑えられています。また、4つの0円、頭金、初期費用、車検、法定点検の0円は弊社だけが提供しているサービスです。<br>現在、ビジネスモデル特許申請中です。
+                </p>
+              </div>
+              <div class="question-item">
+                <p class="question-text">なぜ、SurfCarシステムが誕生したんですか？</p>
+                <p class="question-text">
+                  若者の自動車離れは深刻で、新車ディーラで新車が売れず、そのため良質な中古車が回ってこない中古車販売会社、安くて良い高級車に乗りたいが高額な初期費用、月々の支払のみならずボーナス時の支払に躊躇するユーザの三者の悩みを解決すべく、業界のタブーを破り、解決するために世界初の事業として企画され誕生いたしました。
+                </p>
+              </div>
+            </div>
+            <div class="question-box">
+              <div class="question-item">
+                <p class="question-text">なぜ頭金（初期費用）がいらないのですか？なぜこんなに安いのですか？</p>
+                <p class="question-text">
+                  弊社独自のAIシステムを活用し３年後の残価設定額を毎日算出しており、その設定した残価との差額を当社独自の変額ローンで支払っているため頭金は不要となっております。高級車で頭金がいらない画期的なビジネスモデル（特許申請中）と考えております。なお、当社はSurfCarクラブ会費で運営されております。
+                </p>
+              </div>
+              <div class="question-item">
+                <p class="question-text">どの車がいくらか分かる一覧表はないですか？</p>
+                <p class="question-text">
+                  申し訳ありませんがありません。弊社独自のAIシステムを活用し３年後の残価設定額をビッグデータ（人気度・市場価格等）を活用して毎日算出しているため日々値段が変わっているためご準備ができておりません。
+                </p>
+              </div>
+            </div>
+            <div class="question-box">
+              <div class="question-item">
+                <p class="question-text">並行輸入車なのでしょうか？</p>
+                <p class="question-text">
+                  いいえ、国内の正規ディーラー車です。
+                </p>
+              </div>
+              <div class="question-item">
+                <p class="question-text">月額には何が含まれていますか？</p>
+                <p class="question-text">
+                  車両ローン費用と法定点検費用と諸費用（1年目の自動車税、自賠責保険、車庫証明手続き費用等、納車陸送費用及びSurfCarクラブの初期登録費用及び会費）と特定非営利活動法人グッドネーバーズ・ジャパンの「ひとりの成長を見守るコース」を通じた支援費用（希望者のみ）が含まれています。
+                </p>
+              </div>
+            </div>
+            <div class="question-box">
+              <div class="question-item">
+                <p class="question-text">高額買取とはなんですか？</p>
+                <p class="question-text">
+                  高額買取とはローン残債を差額の精算なく車両を引き取る事をいいます。弊社もしく弊社提携業者での高額で買取を実施するには上記に記載の高額買取条件を満たす必要があります。条件を満たしていない場合で当社もしく弊社提携業者で買取を実施する場合には通常買取となりローン残債と中古市場（<a class="popup__text">USSオークション</a>）での査定価格との差額をご精算いただく必要があります。
+                </p>
+              </div>
+              <div class="question-item">
+                <p class="question-text">月額以外にかかる費用はありますか？</p>
+                <p class="question-text">
+                  2年目以降の自動車税、任意保険料、駐車場代、ガソリン代、消耗品等が必要となります。なお、1年目と2年目の法廷点検費用は月額に含まれております。
+                </p>
+              </div>
+            </div>
+            <div class="question-box">
+              <div class="question-item">
+                <p class="question-text">車を買うのにSurfCarクラブに入会しないといけませんか？</p>
+                <p class="question-text">
+                  はい、SurfCarシステムを利用するにはSurfCarクラブに入会する必要があります。
+                </p>
+              </div>
+              <div class="question-item">
+                <p class="question-text">SurfCarクラブに入会するのに費用はかかりますか？</p>
+                <p class="question-text">
+                  はい、費用がかかります。クラブの初期登録費用と会費は毎月のお支払いにすべて含まれておりますので、最初に出費するものはありません。
+                </p>
+              </div>
+            </div>
+            <div class="question-box">
+              <div class="question-item">
+                <p class="question-text">試乗はできますか？</p>
+                <p class="question-text">
+                  当社では試乗できません。最寄りの新車ディーラー様で試乗をお願いいたします。なお、そちらのディーラー様で試乗・保守対応が可能です。
+                </p>
+              </div>
+              <div class="question-item">
+                <p class="question-text">対象領域を教えてください</p>
+                <p class="question-text">
+                  沖縄県と鹿児島県、離島を除く全国が対象です。
+                </p>
+              </div>
+            </div>
+            <div class="question-box">
+              <div class="question-item">
+                <p class="question-text">3年経ち、次の新車に必ず乗らないといけない（SurfCarクラブ会員を継続しないといけない）のでしょうか？</p>
+                <p class="question-text">
+                  必ずご契約を更新する必要はありません。車を返却し終了することもできます。<br>
+                  ただし、ご契約を継続しない場合（SurfCarクラブ会員を退会する場合）は高額買取はできず、通常買取となります。<br>
+                  ご契約を継続の場合（SurfCarクラブ会員を継続する場合）は、3年経過後に発生した車両のマーケット価格と車の残債との差額分は当社がすべてリスクを保証・負担いたします。
+                </p>
+              </div>
+              <div class="question-item">
+                <p class="question-text">途中で事故を起こした車両はどうなるのでしょうか？</p>
+                <p class="question-text">
+                  まずは高額買取保証を担保するために弊社の営業担当にご連絡ください。その上で車両の修理をお願いいたします。
+                </p>
+              </div>
+            </div>
+            <div class="question-box">
+              <div class="question-item">
+                <p class="question-text">フロントガラスの傷は必ず直さないといけませんか？</p>
+                <p class="question-text">
+                  はい、必ず直してください。直さない場合は高額買取保証はできず、通常買取となります。
+                </p>
+              </div>
+              <div class="question-item">
+                <p class="question-text">経年劣化の傷（バンパーの飛び石傷等）も直さないといけませんか？</p>
+                <p class="question-text">
+                  小さいものは補修不要です。大きな損傷は修理する必要があります。
+                </p>
+              </div>
+            </div>
+            <div class="question-box">
+              <div class="question-item">
+                <p class="question-text">高額買取の条件を満たせず、通常買取となり査定で出た差額はいつ支払いをする必要がありますか？</p>
+                <p class="question-text">
+                  車の返却時に必ずご精算ください。
+                </p>
+              </div>
+              <div class="question-item">
+                <p class="question-text">車の保守体制はどうなっていますか？</p>
+                <p class="question-text">
+                  お近くの新車ディーラーの保守がご利用できますのでいつもご安心してお乗り頂けます。
+                </p>
+              </div>
+            </div>
+            <div class="question-box">
+              <div class="question-item">
+                <p class="question-text">車両の所有者は誰になりますか？</p>
+                <p class="question-text">
+                  ご契約されたローン会社の所有となり、お客様は使用者として車検証に登録されます。（通常の車両ローン購入と同じ）
+                </p>
+              </div>
+              <div class="question-item">
+                <p class="question-text">自動車税は支払い義務はありますか？</p>
+                <p class="question-text">
+                  はい、あります。使用者が納税義務者となっております。リース契約とは違います。
+                </p>
+              </div>
+            </div>
+            <div class="question-box">
+              <div class="question-item">
+                <p class="question-text">車両購入のためのローン契約の内容はどうなっていますか？</p>
+                <p class="question-text">
+                  基本的に5年のローン契約となります。最初3年間は低額で最後の2年間は高額になる当社独自の車両用変額ローンを利用します。
+                </p>
+              </div>
+              <div class="question-item">
+                <p class="question-text">3年経って車を返却したくない場合はどうしたら良いですか？</p>
+                <p class="question-text">
+                  契約終了のご連絡時（２カ月前）にご相談ください。さらに2年間契約を延長できます。その場合、高額買取保証はなくなり通常買取となりますので予めご了承ください。
+                </p>
+              </div>
+            </div>
+            <div class="question-box">
+              <div class="question-item">
+                <p class="question-text">SurfCarクラブ会員のまま3年未満で新しい車に乗り換えることは可能ですか？</p>
+                <p class="question-text">
+                  はい、可能です。是非、営業担当に早めにご相談ください。その時点での一番良い案をご提案いたします。新車販売の促進と良質な中古車の確保を促進しております。
+                </p>
+              </div>
+              <div class="question-item">
+                <p class="question-text">3年未満で契約を終了することは可能ですか？</p>
+                <p class="question-text">
+                  はい、可能です。車の返却時に<a class="popup__text">USSオークション</a>査定で差額が発生なければ、返却のみで終了となります。差額が発生している場合は精算で終了です。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="footer js-footer">
+      <div class="footer-inner">
+        <ul>
+          <li><a href="http://surfcar.jp/yakkan.pdf" target="_blank">SurfCar約款</a></li>
+          <li><a href="http://surfcar.jp/privacy.pdf" target="_blank">プライバシーポリシー</a></li>
+          <li><a href="http://surfcar.jp/law.html" target="_blank">特定商取引法に基づく表記</a></li>
+          <li><a href="http://surfcar.jp/law.html#kobutsu" target="_blank">古物営業法に基づく表記</a></li>
+          <li><a href="http://surfcar.jp/company.html" target="_blank">運営会社</a></li>
+        </ul>
+        <!--<div class="line-it-button" data-lang="ja" data-type="friend" data-lineid="@xpg2738m" style="display: none;"></div>-->
+        <!--<script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>-->
+        <p class="copyright">&copy;サーフカーシステム All Rights Reserved.</p>
+      </div>
+    </footer>
+    <div class="popup">
+      <img src="./img/icons/information.svg" alt="" />
+      <p>
+        全国各地で毎週開催されている日本最大の中古車オークション。<br>
+        出品前に審査員による10段階の中古車評価が行われている。
+      </p>
+    </div>
+  </div>
+  <script src="./js/jquery.autoKana.js"></script>
+  <script>
+    $(function () {
+      $.fn.autoKana('#name01', '#kana01', {
+        katakana: true
+      })
+      $.fn.autoKana('#name02', '#kana02', {
+        katakana: true
+      })
+    })
+  </script>
+  <script src="./js/ajaxzip3.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./contact/js/mailform-js.php"></script>
+</body>
+
 </html>
